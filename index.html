@@ -14,10 +14,10 @@
   <style>
     /* ===== DESIGN TOKENS ===== */
     :root {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xs: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+      --text-sm: clamp(1rem, 0.95rem + 0.35vw, 1.125rem);
+      --text-base: clamp(1.125rem, 1.05rem + 0.4vw, 1.3rem);
+      --text-lg: clamp(1.25rem, 1.1rem + 0.75vw, 1.625rem);
       --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
       --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
       --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
@@ -564,19 +564,20 @@
 
     .coa-footnote {
       margin-top: var(--space-6);
-      padding: var(--space-3) var(--space-4);
-      border-left: 3px solid var(--color-border);
+      padding: var(--space-4) var(--space-5);
+      border-left: 3px solid var(--color-primary);
       font-size: var(--text-sm);
-      color: var(--color-text-faint);
-      line-height: 1.65;
-      font-style: italic;
-      background: color-mix(in oklch, var(--color-surface-offset) 60%, transparent);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      font-style: normal;
+      background: color-mix(in oklch, var(--color-surface-2) 80%, var(--color-surface));
       border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     }
 
     .coa-footnote strong {
       font-style: normal;
-      color: var(--color-text-muted);
+      color: var(--color-text);
+      font-weight: 600;
     }
 
     /* ===== END COAT OF ARMS ===== */
@@ -1149,11 +1150,15 @@
 
   <div class="two-col two-col-3-2">
     <div>
-      <p class="body-text reveal">The family, then styled as <strong>von Schödler</strong>, emerged from the Rhine provinces as free — meaning noble — descent. Nineteenth-century genealogical records compiled for Berks County, Pennsylvania describe the Schödlers as spreading "over large portions of Germany and Switzerland, where it originated various noble families, which are recorded partly in the Austrian, and partly in the Berner and Basler lists of Knights" (Historical &amp; Biographical Annals of Berks County, 1907). The medieval Rhineland was a complex political landscape: it was ruled from the 13th century by the Bavarian Wittelsbach dynasty, and was fractured into small independent states with intertwined temporal and religious governments (Wilson, 2016).</p>
+      <p class="body-text reveal">The family, then styled as <strong>von Schödler</strong>, emerged from the Rhine provinces as free — meaning noble — descent.</p>
+      <p class="body-text reveal">Nineteenth-century genealogical records compiled for Berks County, Pennsylvania describe the Schödlers as spreading "over large portions of Germany and Switzerland, where it originated various noble families, which are recorded partly in the Austrian, and partly in the Berner and Basler lists of Knights" (Historical &amp; Biographical Annals of Berks County, 1907).</p>
+      <p class="body-text reveal">The medieval Rhineland was a complex political landscape: it was ruled from the 13th century by the Bavarian Wittelsbach dynasty, and was fractured into small independent states with intertwined temporal and religious governments (Wilson, 2016).</p>
 
-      <p class="body-text reveal" style="margin-top: var(--space-4);">The lineage is documented at least to <strong>Hector, surnamed der Schödler</strong>, a knight who served as town magistrate of Aachen (Aix-la-Chapelle) by imperial appointment. His son <strong>Hans der Schödler</strong> was constituted Count of Fiefenbach by Charlemagne in the year <strong>805 AD</strong> (Historical &amp; Biographical Annals of Berks County, 1907). The Carolingian system of appointing loyal knights as local administrators — a structure that gave rise to many lasting noble families — is well documented in the scholarship on Frankish governance (Wilson, 2016).</p>
+      <p class="body-text reveal" style="margin-top: var(--space-4);">The lineage is documented at least to <strong>Hector, surnamed der Schödler</strong>, a knight who served as town magistrate of Aachen (Aix-la-Chapelle) by imperial appointment.</p>
+      <p class="body-text reveal" style="margin-top: var(--space-4);">His son <strong>Hans der Schödler</strong> was constituted Count of Fiefenbach by Charlemagne in the year <strong>805 AD</strong> (Historical &amp; Biographical Annals of Berks County, 1907). The Carolingian system of appointing loyal knights as local administrators — a structure that gave rise to many lasting noble families — is well documented in the scholarship on Frankish governance (Wilson, 2016).</p>
 
-      <p class="body-text reveal" style="margin-top: var(--space-4);">Another descendant, <strong>Knight Gotthard der Schödler</strong>, is recorded as having participated in crusades against Frisian pagans, bringing captives to Aachen where they received Christian baptism. He died in <strong>820 AD</strong> as a monk of the cloister at Paderborn — where his tomb and the Schödler coat of arms, carved in stone, reportedly still existed in the 19th century (Historical &amp; Biographical Annals of Berks County, 1907). These records, though compiled centuries after the fact, draw on genealogical traditions common to the Rhine provinces.</p>
+      <p class="body-text reveal" style="margin-top: var(--space-4);">Another descendant, <strong>Knight Gotthard der Schödler</strong>, is recorded as having participated in crusades against Frisian pagans, bringing captives to Aachen where they received Christian baptism.</p>
+      <p class="body-text reveal" style="margin-top: var(--space-4);">He died in <strong>820 AD</strong> as a monk of the cloister at Paderborn — where his tomb and the Schödler coat of arms, carved in stone, reportedly still existed in the 19th century (Historical &amp; Biographical Annals of Berks County, 1907). These records, though compiled centuries after the fact, draw on genealogical traditions common to the Rhine provinces.</p>
 
       <div class="pull-quote reveal">
         <blockquote>"The lineage goes back so far that it is lost in the early centuries of the Christian era in Germany."</blockquote>
@@ -1162,7 +1167,8 @@
 
       <div class="analysis-box reveal">
         <div class="analysis-box-title">Analytical Note: Interpreting Medieval Genealogy</div>
-        <p>Medieval noble genealogies must be read critically. Records like the Berks County Annals draw on family oral traditions and 19th-century genealogical compilations, which often blended documentary evidence with hagiographic enhancement. The specific events attributed to 805 and 820 AD — while plausible within the Carolingian political structure — cannot be independently verified from surviving primary sources. Nonetheless, the consistency of the heraldic record from 1260 onward provides firmer documentary grounding for the family's noble status (Historical &amp; Biographical Annals of Berks County, 1907; Heraldry Institute of Rome, 2018).</p>
+        <p>Medieval noble genealogies must be read critically. Records like the Berks County Annals draw on family oral traditions and 19th-century genealogical compilations, which often blended documentary evidence with hagiographic enhancement.</p>
+        <p>The specific events attributed to 805 and 820 AD — while plausible within the Carolingian political structure — cannot be independently verified from surviving primary sources. Nonetheless, the consistency of the heraldic record from 1260 onward provides firmer documentary grounding for the family's noble status (Historical &amp; Biographical Annals of Berks County, 1907; Heraldry Institute of Rome, 2018).</p>
       </div>
     </div>
 
@@ -1182,7 +1188,10 @@
 
         <h4 class="coa-subhead">What a Coat of Arms Actually Meant</h4>
         <p class="coa-body">
-          In the medieval Holy Roman Empire, a coat of arms was a form of legal identity. It established that a family belonged to the hereditary nobility — a distinct legal class with rights to land, military service, and participation in imperial governance. As Wilson (2016) documents in his authoritative history of the Empire, noble status and the rights that came with it were attached to family lineage, not just individual persons. To inherit the arms was to inherit the legal standing.
+          In the medieval Holy Roman Empire, a coat of arms was a form of legal identity. It established that a family belonged to the hereditary nobility — a distinct legal class with rights to land, military service, and participation in imperial governance.
+        </p>
+        <p class="coa-body">
+          As Wilson (2016) documents in his authoritative history of the Empire, noble status and the rights that came with it were attached to family lineage, not just individual persons. To inherit the arms was to inherit the legal standing.
         </p>
         <p class="coa-body">
           Historian Marcus Meer (2024), in a study of heraldry across English and German medieval cities, found that coats of arms functioned as "visual expressions of identity" and served as instruments of "social and political legitimization" — used in manuscripts, on public buildings, in churches, and in civic processions. Even among townspeople, arms were carefully curated to communicate rank, credibility, and dynastic continuity (Meer, 2024).
@@ -1190,17 +1199,32 @@
 
         <h4 class="coa-subhead">What "von Schödler" Signified</h4>
         <p class="coa-body">
-          The prefix <em>von</em> — meaning "of" or "from" — in the name <strong>George von Schödler</strong> was not merely a style. In medieval German usage, <em>von</em> attached to a family name typically denoted territorial origin or territorial lordship: the family was identified with and held authority over a place. Janiš (2024), in a study of medieval noble stratification in central Europe, documents that the hereditary nobility was legally defined by its association with land (<em>hereditas</em>), with noble status considered an attribute that was both heritable and tied to a specific estate. Lesser nobles — often called <em>milites</em> (knights) in Latin documents — held their status by virtue of this combination: family lineage, military service, and territorial attachment (Janiš, 2024).
+          The prefix <em>von</em> — meaning "of" or "from" — in the name <strong>George von Schödler</strong> was not merely a style. In medieval German usage, <em>von</em> attached to a family name typically denoted territorial origin or territorial lordship: the family was identified with and held authority over a place.
+        </p>
+        <p class="coa-body">
+          Janiš (2024), in a study of medieval noble stratification in central Europe, documents that the hereditary nobility was legally defined by its association with land (<em>hereditas</em>), with noble status considered an attribute that was both heritable and tied to a specific estate. Lesser nobles — often called <em>milites</em> (knights) in Latin documents — held their status by virtue of this combination: family lineage, military service, and territorial attachment (Janiš, 2024).
         </p>
 
         <h4 class="coa-subhead">Who Could Grant Arms — and Why It Mattered</h4>
         <p class="coa-body">
-          Imperial arms grants were made under the authority of the emperor himself, or through delegates called <em>Hofpfalzgrafen</em> — Counts Palatine of the imperial court — who held the delegated power to ennoble families and confirm heraldic rights (Bridges, n.d.). A grant from the Emperor directly, as in the Schödler case, was the highest possible form of confirmation. It meant the family's noble status was recognized across the entire empire, not just within a local territory. The Heraldry Institute of Rome's genealogical database independently records the Schödel surname in German documents from as early as 1333, confirming the family's continued presence in the upper Rhine region well into the medieval period (Heraldry Institute of Rome, 2018).
+          Imperial arms grants were made under the authority of the emperor himself, or through delegates called <em>Hofpfalzgrafen</em> — Counts Palatine of the imperial court — who held the delegated power to ennoble families and confirm heraldic rights (Bridges, n.d.).
+        </p>
+        <p class="coa-body">
+          A grant from the Emperor directly, as in the Schödler case, was the highest possible form of confirmation. It meant the family's noble status was recognized across the entire empire, not just within a local territory.
+        </p>
+        <p class="coa-body">
+          The Heraldry Institute of Rome's genealogical database independently records the Schödel surname in German documents from as early as 1333, confirming the family's continued presence in the upper Rhine region well into the medieval period (Heraldry Institute of Rome, 2018).
         </p>
 
         <h4 class="coa-subhead">A Family Across Social Strata</h4>
         <p class="coa-body">
-          By the 14th century, the surname had spread across different social classes — a natural outcome for a noble family whose younger or lesser branches could not always maintain the land and resources needed to sustain formal noble status. The Heraldry Institute records <strong>Eberwinus Schödel (1333, Oberrhein)</strong> as a glove-maker and <strong>Walther Schödel (1398, Mengen)</strong> as a priest (Heraldry Institute of Rome, 2018). That the name appears among both craftsmen and clergy within a single century reflects a pattern well documented in medieval German social history: the lesser nobility (<em>milites</em>) frequently descended into the skilled artisan class when their landed estates were reduced by inheritance divisions, warfare, or economic misfortune. Freed (1992) identifies this as a defining characteristic of the lower German nobility — a class that was numerous, legally distinct from commoners, yet economically precarious.
+          By the 14th century, the surname had spread across different social classes — a natural outcome for a noble family whose younger or lesser branches could not always maintain the land and resources needed to sustain formal noble status.
+        </p>
+        <p class="coa-body">
+          The Heraldry Institute records <strong>Eberwinus Schödel (1333, Oberrhein)</strong> as a glove-maker and <strong>Walther Schödel (1398, Mengen)</strong> as a priest (Heraldry Institute of Rome, 2018). That the name appears among both craftsmen and clergy within a single century reflects a pattern well documented in medieval German social history.
+        </p>
+        <p class="coa-body">
+          The lesser nobility (<em>milites</em>) frequently descended into the skilled artisan class when their landed estates were reduced by inheritance divisions, warfare, or economic misfortune. Freed (1992) identifies this as a defining characteristic of the lower German nobility — a class that was numerous, legally distinct from commoners, yet economically precarious.
         </p>
 
         <aside class="coa-footnote" aria-label="Source note">
@@ -1242,7 +1266,8 @@
       <div class="timeline-item">
         <div class="timeline-date">Mid-17th Century</div>
         <h3 class="timeline-heading">Decline of the Noble Line</h3>
-        <p class="timeline-body">Around 1650, the Schödler name disappears from Austrian and Swiss genealogical tables. The Berks County Annals attribute this to "the most important and respectable branches of the family" having "died out," with surviving members having "abandoned the title of nobility" (Historical &amp; Biographical Annals of Berks County, 1907). This timeline aligns with the devastation of the Thirty Years' War (1618–1648), which killed approximately one-third of Germany's population and economically ruined much of the minor nobility. The displacement of noble families into the artisan and merchant classes during this period was a documented social phenomenon across Central Europe.</p>
+        <p class="timeline-body">Around 1650, the Schödler name disappears from Austrian and Swiss genealogical tables. The Berks County Annals attribute this to "the most important and respectable branches of the family" having "died out," with surviving members having "abandoned the title of nobility" (Historical &amp; Biographical Annals of Berks County, 1907).</p>
+        <p class="timeline-body">This timeline aligns with the devastation of the Thirty Years' War (1618–1648), which killed approximately one-third of Germany's population and economically ruined much of the minor nobility. The displacement of noble families into the artisan and merchant classes during this period was a documented social phenomenon across Central Europe.</p>
       </div>
 
       <div class="timeline-item">
@@ -1254,13 +1279,15 @@
       <div class="timeline-item">
         <div class="timeline-date">Late 18th Century</div>
         <h3 class="timeline-heading">Craftsmen of Upper Franconia</h3>
-        <p class="timeline-body">In cities like <strong>Münchberg</strong> in Upper Franconia (Bavaria), records show Schödel family members among the tradesman class. The region was already known for hand weaving: by 1752, Münchberg counted 30 weavers among 160 craftsmen (MünchBürger e.V., n.d.). The transition from noble landowner to skilled artisan — common across Central Europe in this era — positioned the family for the industrial transformation that Friedrich Schoedel would lead a century later. The Rhineland's geography, centered on river trade and artisan production, facilitated exactly this kind of class migration across generations (Wilson, 2016).</p>
+        <p class="timeline-body">In cities like <strong>Münchberg</strong> in Upper Franconia (Bavaria), records show Schödel family members among the tradesman class. By 1752, Münchberg counted 30 weavers among 160 craftsmen (MünchBürger e.V., n.d.).</p>
+        <p class="timeline-body">The transition from noble landowner to skilled artisan — common across Central Europe in this era — positioned the family for the industrial transformation that Friedrich Schoedel would lead a century later. The Rhineland's geography, centered on river trade and artisan production, facilitated exactly this kind of class migration across generations (Wilson, 2016).</p>
       </div>
     </div>
 
     <div class="context-box reveal">
       <div class="context-box-title">The Palatinate Connection</div>
-      <p>The Pennsylvania Germans — who share geographic origins with the Schödel family — came predominantly from the Palatinate and surrounding Rhine territories. Historian Marianne Wokeck (1999) estimates just under 81,000 German-speakers entered Philadelphia between 1683 and 1775, with the Palatinate as the dominant source region. The cultural and geographic overlap between the Rhine provinces that gave rise to the Schödel noble lineage and the emigration patterns that produced the Pennsylvania Schoedler family cannot be coincidental — both stories begin in the same river valleys.</p>
+      <p>The Pennsylvania Germans — who share geographic origins with the Schödel family — came predominantly from the Palatinate and surrounding Rhine territories. Historian Marianne Wokeck (1999) estimates just under 81,000 German-speakers entered Philadelphia between 1683 and 1775, with the Palatinate as the dominant source region.</p>
+      <p>The cultural and geographic overlap between the Rhine provinces that gave rise to the Schödel noble lineage and the emigration patterns that produced the Pennsylvania Schoedler family cannot be coincidental — both stories begin in the same river valleys.</p>
     </div>
   </div>
 </section>
@@ -1300,15 +1327,20 @@
   <div class="two-col reveal">
     <div>
       <div class="section-tag tag-gold">Business Legacy</div>
-      <p class="body-text">In <strong>1884–1885</strong>, <strong>Friedrich Schoedel</strong> joined a wave of Münchberg industrialists who mechanized weaving production using power looms. The <a href="https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/" class="source-link" target="_blank">University of Hof's historical record</a> describes the Schoedel weaving mill as "one of the largest businesses in the town" during its peak era around 1900 (University of Hof, 2023). The mechanization of textile production in Münchberg in the 1880s was part of a broader German industrial wave: Bavaria employed 109,000 persons — approximately 8% of Germany's textile workforce — as of 1939 (International Labour Organization [ILO], ca. 1950).</p>
+      <p class="body-text">In <strong>1884–1885</strong>, <strong>Friedrich Schoedel</strong> joined a wave of Münchberg industrialists who mechanized weaving production using power looms.</p>
+      <p class="body-text" style="margin-top: var(--space-4);">The <a href="https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/" class="source-link" target="_blank">University of Hof's historical record</a> describes the Schoedel weaving mill as "one of the largest businesses in the town" during its peak era around 1900 (University of Hof, 2023). Bavaria employed 109,000 persons — approximately 8% of Germany's textile workforce — as of 1939 (International Labour Organization [ILO], ca. 1950).</p>
 
-      <p class="body-text" style="margin-top: var(--space-4);">The factory's oldest product line was the <strong>Drellweberei</strong> — a corded twill weave historically used for mattress covers and corset fabrics. By 1925–26, a spinning building was added, expanding the vertical integration of the operation (MünchBürger e.V., n.d.). This move toward vertical integration was a hallmark of successful Mittelstand firms, which sought to reduce dependency on external suppliers and maintain control over product quality across the entire production chain.</p>
+      <p class="body-text" style="margin-top: var(--space-4);">The factory's oldest product line was the <strong>Drellweberei</strong> — a corded twill weave historically used for mattress covers and corset fabrics.</p>
+      <p class="body-text" style="margin-top: var(--space-4);">By 1925–26, a spinning building was added, expanding the vertical integration of the operation (MünchBürger e.V., n.d.). This move toward vertical integration was a hallmark of successful Mittelstand firms, which sought to reduce dependency on external suppliers and maintain control over product quality.</p>
 
-      <p class="body-text" style="margin-top: var(--space-4);">In the early 20th century, the firm's signature export product, <strong>"Wiener Linon"</strong> (Vienna Cambric — a fine, plain-woven cotton fabric; <em>Linon</em> refers to cambric, distinct from the sheerer fabric known as lawn), achieved international success. By the late 20th century, Friedrich Schoedel GmbH remained the <strong>sole German manufacturer of inelastic corset fabric</strong> — a remarkable market specialization for a family firm of its size (MünchBürger e.V., n.d.). The company subsequently added knitted mattress cover fabrics to adapt to changing consumer markets in the 1990s.</p>
+      <p class="body-text" style="margin-top: var(--space-4);">In the early 20th century, the firm's signature export product, <strong>"Wiener Linon"</strong> (Vienna Cambric — a fine, plain-woven cotton fabric; <em>Linon</em> refers to cambric, distinct from the sheerer fabric known as lawn), achieved international success.</p>
+      <p class="body-text" style="margin-top: var(--space-4);">By the late 20th century, Friedrich Schoedel GmbH remained the <strong>sole German manufacturer of inelastic corset fabric</strong> — a remarkable market specialization for a family firm of its size (MünchBürger e.V., n.d.). The company subsequently added knitted mattress cover fabrics to adapt to changing consumer markets in the 1990s.</p>
 
       <div class="analysis-box" style="margin-top: var(--space-6);">
         <div class="analysis-box-title">The Mittelstand Framework</div>
-        <p>The Friedrich Schoedel firm exemplifies Germany's <em>Mittelstand</em> — family-owned small and medium enterprises that form the backbone of German economic identity. As Venohr et al. (2015) describe, Mittelstand firms are run by "owner-entrepreneurial families seeking to sustain the business by instituting a core ideology of longevity." Simon (1996), in his foundational study of German market leaders, identified precisely this long-term orientation and niche specialization as the hallmarks of durable German family firms. The historical record of Friedrich Schoedel GmbH — 123 years of continuous family ownership across wars, hyperinflation, state seizure, and global competition — embodies this ethos of generational continuity.</p>
+        <p>The Friedrich Schoedel firm exemplifies Germany's <em>Mittelstand</em> — family-owned small and medium enterprises that form the backbone of German economic identity.</p>
+        <p>As Venohr et al. (2015) describe, Mittelstand firms are run by "owner-entrepreneurial families seeking to sustain the business by instituting a core ideology of longevity." Simon (1996), in his foundational study of German market leaders, identified precisely this long-term orientation and niche specialization as the hallmarks of durable German family firms.</p>
+        <p>The historical record of Friedrich Schoedel GmbH — 123 years of continuous family ownership across wars, hyperinflation, state seizure, and global competition — embodies this ethos of generational continuity.</p>
         <p style="margin-top: var(--space-3);">The eventual decline of the firm in 2008 aligns with broader structural forces: since the 1970s, deindustrialization hit the textile industry especially hard, with global competition from low-wage producers eroding the market position of European manufacturers (Social History Portal, 2020). This pattern affected the entire Münchberg textile cluster, not merely the Schoedel family enterprise.</p>
       </div>
     </div>
@@ -1354,11 +1386,15 @@
 
     <div class="two-col reveal">
       <div>
-        <p class="body-text">The Friedrich Schoedel textile firm weathered the turbulent Weimar Republic years under severe strain. German industrial production fell to the level of the late 1880s by the end of World War I, and could not reach pre-war output levels until 1927 (Hardach, 2014). Unemployment rose to approximately 10% by 1926, then collapsed catastrophically following the 1929 Wall Street crash. The Schoedel factory records show the firm was <strong>temporarily shut down in 1933</strong> — the year Hitler became Chancellor — suggesting economic distress coinciding with political upheaval (MünchBürger e.V., n.d.).</p>
+        <p class="body-text">The Friedrich Schoedel textile firm weathered the turbulent Weimar Republic years under severe strain. German industrial production fell to the level of the late 1880s by the end of World War I, and could not reach pre-war output levels until 1927 (Hardach, 2014).</p>
 
-        <p class="body-text" style="margin-top: var(--space-4);">For German business owners, survival required navigating impossible choices: comply with an increasingly radical political environment, or risk losing access to contracts, credit, and community standing. The NSDAP's appeal to the Mittelstand and small business owners was not incidental — the party explicitly targeted artisans, shopkeepers, and small manufacturers who had been devastated by the economic crises of the Weimar period (Kater, 1983). Between 1928 and 1932, Nazi Party support grew from 2.6% to 37.3% of the national vote, with its strongest support concentrated in Protestant rural areas, small towns, and among the lower middle class (Geary, n.d.).</p>
+        <p class="body-text" style="margin-top: var(--space-4);">Unemployment rose to approximately 10% by 1926, then collapsed catastrophically following the 1929 Wall Street crash. The Schoedel factory records show the firm was <strong>temporarily shut down in 1933</strong> — the year Hitler became Chancellor — suggesting economic distress coinciding with political upheaval (MünchBürger e.V., n.d.).</p>
 
-        <p class="body-text" style="margin-top: var(--space-4);">Historian Michael Kater's (1983) foundational study of NSDAP membership demonstrates that the lower middle class — the social stratum that included small manufacturers like the Schoedels — was dramatically overrepresented in Nazi Party membership. While the lower middle class comprised approximately 42.65% of the German population in 1933, it contributed 57.1% of new NSDAP members that year (Kater, 1983). This was not mere coercion: it reflected genuine economic grievances and political desperation in a class that saw the Weimar Republic as having failed to protect them.</p>
+        <p class="body-text" style="margin-top: var(--space-4);">For German business owners, survival required navigating impossible choices: comply with an increasingly radical political environment, or risk losing access to contracts, credit, and community standing.</p>
+        <p class="body-text" style="margin-top: var(--space-4);">The NSDAP's appeal to the Mittelstand and small business owners was not incidental — the party explicitly targeted artisans, shopkeepers, and small manufacturers who had been devastated by the economic crises of the Weimar period (Kater, 1983). Between 1928 and 1932, Nazi Party support grew from 2.6% to 37.3% of the national vote (Geary, n.d.).</p>
+
+        <p class="body-text" style="margin-top: var(--space-4);">Historian Michael Kater's (1983) foundational study of NSDAP membership demonstrates that the lower middle class — the social stratum that included small manufacturers like the Schoedels — was dramatically overrepresented in Nazi Party membership.</p>
+        <p class="body-text" style="margin-top: var(--space-4);">While the lower middle class comprised approximately 42.65% of the German population in 1933, it contributed 57.1% of new NSDAP members that year (Kater, 1983). This was not mere coercion: it reflected genuine economic grievances and political desperation in a class that saw the Weimar Republic as having failed to protect them.</p>
       </div>
 
       <div>
@@ -1394,7 +1430,9 @@
 
     <div class="context-box reveal" style="border-left: 4px solid var(--color-danger);">
       <div class="context-box-title">About These Records</div>
-      <p>The NSDAP membership files (Record Group 242) at the <a href="https://catalog.archives.gov/id/12044361" class="source-link" target="_blank">US National Archives</a> contain approximately 10 million membership cards from the Nazi Party's Zentralkartei (central index) and Ortsgruppenkartei (local group index), covering roughly 80% of NSDAP members (U.S. National Archives, 2026). A 2026 Harvard study using AI to digitize and analyze these records found that "early joiners were predominantly middle-class, male, and from non-agricultural industries" but that "those differences narrowed over time," with later members being "largely 'ordinary men' drawn into the movement by propaganda and social pressure" (Bosshart &amp; Weigand, 2026). Critically, the Harvard team found that 40% of German municipalities recorded <em>no</em> Nazi Party members at all — underscoring how geographically concentrated party membership was (Bosshart &amp; Weigand, 2026).</p>
+      <p>The NSDAP membership files (Record Group 242) at the <a href="https://catalog.archives.gov/id/12044361" class="source-link" target="_blank">US National Archives</a> contain approximately 10 million membership cards from the Nazi Party's Zentralkartei (central index) and Ortsgruppenkartei (local group index), covering roughly 80% of NSDAP members (U.S. National Archives, 2026).</p>
+      <p>A 2026 Harvard study using AI to digitize and analyze these records found that "early joiners were predominantly middle-class, male, and from non-agricultural industries" but that "those differences narrowed over time," with later members being "largely 'ordinary men' drawn into the movement by propaganda and social pressure" (Bosshart &amp; Weigand, 2026).</p>
+      <p>Critically, the Harvard team found that 40% of German municipalities recorded <em>no</em> Nazi Party members at all — underscoring how geographically concentrated party membership was (Bosshart &amp; Weigand, 2026).</p>
     </div>
 
     <!-- NSDAP Members Table -->
@@ -1494,7 +1532,9 @@
 
     <div class="context-box reveal" style="margin-top: var(--space-8); border-left: 4px solid var(--color-danger);">
       <div class="context-box-title">The Business Under the Reich — Factory Seizure, 1943</div>
-      <p>The Friedrich Schoedel textile firm in Münchberg was <strong>seized for armaments purposes (<em>für Rüstungszwecke beschlagnahmt</em>) in 1943</strong> by the Nazi regime (MünchBürger e.V., n.d.). This is a significant historical data point: having family members registered as NSDAP members and having your business seized by the state are not contradictions — they reflect the totalitarian nature of the Nazi regime, which exercised coercive control over economic resources regardless of individual party membership status. The ADL's documentation of German industry under the Third Reich notes that industrial seizure for war production was widespread and involuntary for many firms (ADL, n.d.). The factory had already been temporarily closed in 1933; the 1943 seizure represented a different order of state intrusion.</p>
+      <p>The Friedrich Schoedel textile firm in Münchberg was <strong>seized for armaments purposes (<em>für Rüstungszwecke beschlagnahmt</em>) in 1943</strong> by the Nazi regime (MünchBürger e.V., n.d.).</p>
+      <p>This is a significant historical data point: having family members registered as NSDAP members and having your business seized by the state are not contradictions. They reflect the totalitarian nature of the Nazi regime, which exercised coercive control over economic resources regardless of individual party membership status.</p>
+      <p>The ADL's documentation of German industry under the Third Reich notes that industrial seizure for war production was widespread and involuntary for many firms (ADL, n.d.). The factory had already been temporarily closed in 1933; the 1943 seizure represented a different order of state intrusion.</p>
     </div>
 
     <div class="pull-quote reveal">
@@ -1504,7 +1544,8 @@
 
     <div class="analysis-box reveal">
       <div class="analysis-box-title">Interpretive Framework: Ideology vs. Conformity</div>
-      <p>Historians distinguish sharply between pre-1933 NSDAP joiners — who chose membership when it carried social risk and likely indicates ideological commitment — and post-1933 joiners, for whom membership was often a prerequisite for professional life, guild membership, and social inclusion (Falter, 1991; Kater, 1983). The Schödel members identified in the NSDAP records span both categories. The 1932 joiner (member #996,506) falls into the ideologically motivated early-joiner profile. The 1940 joiners — Gerhard Schoedel and Günther Schödel — joined during wartime when, as Bosshart and Weigand's (2026) Harvard research found, membership increasingly reflected social pressure and conformity rather than political conviction.</p>
+      <p>Historians distinguish sharply between pre-1933 NSDAP joiners — who chose membership when it carried social risk and likely indicates ideological commitment — and post-1933 joiners, for whom membership was often a prerequisite for professional life, guild membership, and social inclusion (Falter, 1991; Kater, 1983).</p>
+      <p>The Schödel members identified in the NSDAP records span both categories. The 1932 joiner (member #996,506) falls into the ideologically motivated early-joiner profile. The 1940 joiners — Gerhard Schoedel and Günther Schödel — joined during wartime when membership increasingly reflected social pressure and conformity rather than political conviction (Bosshart &amp; Weigand, 2026).</p>
       <p>This interpretive distinction does not diminish the moral weight of party membership, which enabled and legitimized the Nazi regime regardless of individual motivation. It does, however, provide the historical precision necessary for responsible genealogical inquiry — distinguishing between perpetrators, opportunists, and those who joined under coercive conditions (Kater, 1983).</p>
     </div>
 
@@ -1536,25 +1577,29 @@
           <div class="timeline-item">
             <div class="timeline-date">1945</div>
             <h3 class="timeline-heading">End of War — American Occupation</h3>
-            <p class="timeline-body">American forces occupied Upper Franconia, placing Münchberg within the US occupation zone. Denazification proceedings required business owners and party members to submit records to military government authorities. The Schoedel Villa, a visible symbol of local wealth, became temporary housing for <strong>August Horch</strong>, the Audi founder who fled Soviet-occupied Saxony (MünchBürger e.V., n.d.). Denazification courts classified Germans into five categories; business owners with NSDAP membership faced scrutiny and potential asset forfeiture, though outcomes varied widely based on local circumstances and evidence presented.</p>
+            <p class="timeline-body">American forces occupied Upper Franconia, placing Münchberg within the US occupation zone. Denazification proceedings required business owners and party members to submit records to military government authorities.</p>
+            <p class="timeline-body">The Schoedel Villa, a visible symbol of local wealth, became temporary housing for <strong>August Horch</strong>, the Audi founder who fled Soviet-occupied Saxony (MünchBürger e.V., n.d.). Denazification courts classified Germans into five categories; business owners with NSDAP membership faced scrutiny and potential asset forfeiture, though outcomes varied widely based on local circumstances and evidence presented.</p>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-date">1947–1948</div>
             <h3 class="timeline-heading">Textile Sector Recovery</h3>
-            <p class="timeline-body">By end of 1947, Bavaria had approximately 50,000 textile workers, nearly reaching the 1939 level — a rapid recovery driven by the arrival of refugees and expellees from eastern German territories (ILO, ca. 1950). Münchberg had 36 textile firms operating by 1947 (MünchBürger e.V., n.d.). The introduction of the Deutsche Mark in June 1948 was a decisive turning point: as the Foundation for Economic Education documents, "striking improvement began in 1948, when the worthless [occupation currency] marks were swept into the ashcan" (Hazlitt, n.d.). The Friedrich Schoedel firm — its factory returned after wartime seizure — resumed production in this reconstructed economic environment.</p>
+            <p class="timeline-body">By end of 1947, Bavaria had approximately 50,000 textile workers, nearly reaching the 1939 level — a rapid recovery driven by the arrival of refugees and expellees from eastern German territories (ILO, ca. 1950). Münchberg had 36 textile firms operating by 1947 (MünchBürger e.V., n.d.).</p>
+            <p class="timeline-body">The introduction of the Deutsche Mark in June 1948 was a decisive turning point. The Friedrich Schoedel firm — its factory returned after wartime seizure — resumed production in this reconstructed economic environment.</p>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-date">1950s–1960s</div>
             <h3 class="timeline-heading">The Wirtschaftswunder Era</h3>
-            <p class="timeline-body">West Germany's <em>Wirtschaftswunder</em> (economic miracle) generated some of the fastest sustained economic growth in modern history. Eichengreen and Ritschl (2008) document that West German GDP rose by nearly 8% per annum between 1950 and 1959 — faster than anywhere else in Europe. This growth was driven by recovery from wartime TFP collapse, the structural reforms of Ludwig Erhard's social market economy, and massive labor inflows from eastern refugees. Münchberg's textile industry reached its postwar peak during this period: approximately 4,000 workers and 2,500 looms by 1955 (MünchBürger e.V., n.d.).</p>
+            <p class="timeline-body">West Germany's <em>Wirtschaftswunder</em> (economic miracle) generated some of the fastest sustained economic growth in modern history. Eichengreen and Ritschl (2008) document that West German GDP rose by nearly 8% per annum between 1950 and 1959 — faster than anywhere else in Europe.</p>
+            <p class="timeline-body">This growth was driven by recovery from wartime TFP collapse, the structural reforms of Ludwig Erhard's social market economy, and massive labor inflows from eastern refugees. Münchberg's textile industry reached its postwar peak: approximately 4,000 workers and 2,500 looms by 1955 (MünchBürger e.V., n.d.).</p>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-date">1970s–2008</div>
             <h3 class="timeline-heading">Deindustrialization and the End of an Era</h3>
-            <p class="timeline-body">The global deindustrialization of textile manufacturing — driven by low-wage competition from Asia — hit Germany's weaving industry especially hard from the 1970s onward (Social History Portal, 2020). Women were disproportionately affected by textile job losses, as they had made up the majority of the weaving workforce (Social History Portal, 2020). Friedrich Schoedel GmbH adapted — becoming the last German maker of inelastic corset fabric and adding knitted mattress cover fabrics in the 1990s (MünchBürger e.V., n.d.). The firm finally <strong>closed in 2008</strong>, after 123 years of continuous family operation, its closure a microcosm of the broader decline of Germany's textile Mittelstand.</p>
+            <p class="timeline-body">The global deindustrialization of textile manufacturing — driven by low-wage competition from Asia — hit Germany's weaving industry especially hard from the 1970s onward (Social History Portal, 2020). Women were disproportionately affected by textile job losses, as they had made up the majority of the weaving workforce (Social History Portal, 2020).</p>
+            <p class="timeline-body">Friedrich Schoedel GmbH adapted — becoming the last German maker of inelastic corset fabric and adding knitted mattress cover fabrics in the 1990s (MünchBürger e.V., n.d.). The firm finally <strong>closed in 2008</strong>, after 123 years of continuous family operation, its closure a microcosm of the broader decline of Germany's textile Mittelstand.</p>
           </div>
         </div>
       </div>
@@ -1598,22 +1643,29 @@
 
   <div class="two-col reveal">
     <div>
-      <p class="body-text">Historical records compiled for Berks County, Pennsylvania document the <strong>Schoedler/Schoedel family</strong> settling primarily in the townships of <strong>Longswamp, Maxatawny, and Richmond</strong> in Berks County (Historical &amp; Biographical Annals of Berks County, 1907). These communities were at the heart of Pennsylvania's 18th-century German immigrant settlement. The compilers noted directly: "Thus far no connecting link between the Schödlers in Germany and Switzerland with those in America has been found" — an honest scholarly admission that the oral tradition of shared origins remained unverified (Historical &amp; Biographical Annals of Berks County, 1907).</p>
+      <p class="body-text">Historical records compiled for Berks County, Pennsylvania document the <strong>Schoedler/Schoedel family</strong> settling primarily in the townships of <strong>Longswamp, Maxatawny, and Richmond</strong> in Berks County (Historical &amp; Biographical Annals of Berks County, 1907). These communities were at the heart of Pennsylvania's 18th-century German immigrant settlement.</p>
 
-      <p class="body-text" style="margin-top: var(--space-4);">The Pennsylvania branch reflects the broader patterns of German emigration to the American colonies. Historian Aaron Fogleman (1996) estimated approximately 85,000 German-speakers migrated to the American colonies between 1700 and 1775. Marianne Wokeck (1999) calculated that just under 81,000 German-speakers entered Philadelphia between 1683 and 1775. Conzen (1980) synthesized census evidence showing that by 1790, persons of German birth or descent constituted approximately one-third of Pennsylvania's total population — the highest concentration of German ancestry of any colonial state. Pennsylvania retains the largest population of German-descent Americans to this day (Conzen, 1980).</p>
+      <p class="body-text" style="margin-top: var(--space-4);">The compilers noted directly: "Thus far no connecting link between the Schödlers in Germany and Switzerland with those in America has been found" — an honest scholarly admission that the oral tradition of shared origins remained unverified (Historical &amp; Biographical Annals of Berks County, 1907).</p>
 
-      <p class="body-text" style="margin-top: var(--space-4);">The primary emigrant stream from which the Pennsylvania Schoedlers likely came was the Palatinate and surrounding Rhine territories — precisely the same geographic region where the Schödler noble family had its documented medieval roots (Library of Congress, n.d.). Fogleman (1996) documents that Pennsylvania Germans came predominantly from southwestern Germany: the Palatinate, Baden-Württemberg, Hesse, Switzerland, and Alsace. The largest emigration wave, 1717–1775, was driven by religious persecution, land pressure, and the economic devastation left by the War of the Spanish Succession in the Rhineland.</p>
+      <p class="body-text" style="margin-top: var(--space-4);">Historian Aaron Fogleman (1996) estimated approximately 85,000 German-speakers migrated to the American colonies between 1700 and 1775. Marianne Wokeck (1999) calculated that just under 81,000 German-speakers entered Philadelphia between 1683 and 1775.</p>
+      <p class="body-text" style="margin-top: var(--space-4);">Conzen (1980) synthesized census evidence showing that by 1790, persons of German birth or descent constituted approximately one-third of Pennsylvania's total population — the highest concentration of German ancestry of any colonial state. Pennsylvania retains the largest population of German-descent Americans to this day (Conzen, 1980).</p>
+
+      <p class="body-text" style="margin-top: var(--space-4);">The primary emigrant stream from which the Pennsylvania Schoedlers likely came was the Palatinate and surrounding Rhine territories — precisely the same geographic region where the Schödler noble family had its documented medieval roots (Library of Congress, n.d.).</p>
+      <p class="body-text" style="margin-top: var(--space-4);">Fogleman (1996) documents that Pennsylvania Germans came predominantly from southwestern Germany: the Palatinate, Baden-Württemberg, Hesse, Switzerland, and Alsace. The largest emigration wave, 1717–1775, was driven by religious persecution, land pressure, and the economic devastation left by the War of the Spanish Succession in the Rhineland.</p>
 
       <div class="pull-quote reveal">
         <blockquote>"Thus far no connecting link between the Schödlers in Germany and Switzerland with those in America has been found."</blockquote>
         <cite>— Historical &amp; Biographical Annals of Berks County, Pennsylvania (1907)</cite>
       </div>
 
-      <p class="body-text reveal">What <em>is</em> consistent across both branches: a <strong>tradition of business ownership and community leadership</strong>. In Germany, the textile industrialists of Münchberg. In America, multiple generations of business founders across sectors and centuries. This entrepreneurial character — building something, sustaining it, and passing it forward — appears to be a family signature regardless of which side of the Atlantic one examines. Whether that continuity is genetic, cultural, or simply the product of shared geographical and social origins remains an open question for future genealogical research.</p>
+      <p class="body-text reveal">What <em>is</em> consistent across both branches: a <strong>tradition of business ownership and community leadership</strong>. In Germany, the textile industrialists of Münchberg. In America, multiple generations of business founders across sectors and centuries.</p>
+      <p class="body-text reveal" style="margin-top: var(--space-4);">This entrepreneurial character — building something, sustaining it, and passing it forward — appears to be a family signature regardless of which side of the Atlantic one examines. Whether that continuity is genetic, cultural, or simply the product of shared geographical and social origins remains an open question for future genealogical research.</p>
 
       <div class="analysis-box reveal">
         <div class="analysis-box-title">The Genealogical Gap: A Research Note</div>
-        <p>The absence of a documented genealogical link between the German and American Schoedel lines is not historically unusual. Pre-emigration records in the Rhine provinces were often kept at the parish level in German, used spelling variants that do not map cleanly to English transliterations, and suffered losses from wars and fires. Berks County immigration patterns show that many families arrived without documents, and surname spelling was frequently anglicized or standardized by colonial-era clerks and pastors. The tool for closing this gap would be comparative DNA analysis combined with systematic review of Bavarian and Rhenish parish records (Kirchenbücher) — a task that remains undone for the Schoedel name specifically.</p>
+        <p>The absence of a documented genealogical link between the German and American Schoedel lines is not historically unusual. Pre-emigration records in the Rhine provinces were often kept at the parish level in German, used spelling variants that do not map cleanly to English transliterations, and suffered losses from wars and fires.</p>
+        <p>Berks County immigration patterns show that many families arrived without documents, and surname spelling was frequently anglicized or standardized by colonial-era clerks and pastors.</p>
+        <p>The tool for closing this gap would be comparative DNA analysis combined with systematic review of Bavarian and Rhenish parish records (Kirchenbücher) — a task that remains undone for the Schoedel name specifically.</p>
       </div>
     </div>
 
@@ -1707,7 +1759,9 @@
 
     <div class="context-box reveal" style="margin-top: var(--space-10);">
       <div class="context-box-title">A Note on Citation Practice</div>
-      <p>All factual claims — demographic data, archival records, historical statistics, and scholarly findings — are cited with author-year in-text references drawn from peer-reviewed monographs, journal articles, and primary archival sources. General-purpose and crowd-sourced encyclopedias are not cited. Peer-reviewed specialist encyclopedias and subject-specific reference works — such as the <em>1914–1918-online: International Encyclopedia of the First World War</em> (Freie Universität Berlin), which employs a scholarly editorial board and double-blind peer review — are distinguished from general encyclopedias and cited where they provide the authoritative specialized source. Primary archival sources — particularly the NARA NSDAP Membership Records (Record Group 242) and the MünchBürger historical society records — form the evidentiary foundation for the industrial and Nazi-era chapters.</p>
+      <p>All factual claims — demographic data, archival records, historical statistics, and scholarly findings — are cited with author-year in-text references drawn from peer-reviewed monographs, journal articles, and primary archival sources. General-purpose and crowd-sourced encyclopedias are not cited.</p>
+      <p>Peer-reviewed specialist encyclopedias and subject-specific reference works — such as the <em>1914–1918-online: International Encyclopedia of the First World War</em> (Freie Universität Berlin), which employs a scholarly editorial board and double-blind peer review — are distinguished from general encyclopedias and cited where they provide the authoritative specialized source.</p>
+      <p>Primary archival sources — particularly the NARA NSDAP Membership Records (Record Group 242) and the MünchBürger historical society records — form the evidentiary foundation for the industrial and Nazi-era chapters.</p>
     </div>
   </div>
 </section>
