@@ -1059,6 +1059,99 @@
     .analysis-box p + p {
       margin-top: var(--space-3);
     }
+
+    /* ===== RESEARCH QUESTIONS BOX ===== */
+    .research-box {
+      background: color-mix(in oklch, var(--color-primary) 5%, var(--color-surface));
+      border: 1px solid color-mix(in oklch, var(--color-primary) 25%, transparent);
+      border-top: 3px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6) var(--space-6);
+      margin: var(--space-10) 0 var(--space-4);
+    }
+
+    .research-box-title {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.03em;
+      margin-bottom: var(--space-4);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .research-box-title::before {
+      content: '⁇';
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--color-primary);
+      opacity: 0.7;
+    }
+
+    .research-box ol {
+      list-style: decimal;
+      padding-left: 1.6em;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .research-box li {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      max-width: 68ch;
+    }
+
+    .research-box li strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .research-box-note {
+      margin-top: var(--space-4);
+      padding-top: var(--space-3);
+      border-top: 1px solid color-mix(in oklch, var(--color-primary) 15%, transparent);
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* ===== RELIGION BOX (blue-tinted) ===== */
+    .religion-box {
+      background: color-mix(in oklch, #4a6fa5 5%, var(--color-surface));
+      border: 1px solid color-mix(in oklch, #4a6fa5 22%, transparent);
+      border-left: 4px solid #4a6fa5;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: var(--space-5) var(--space-6);
+      margin: var(--space-6) 0;
+    }
+
+    .religion-box-title {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b9dd4;
+      margin-bottom: var(--space-2);
+    }
+
+    .religion-box p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .religion-box p + p {
+      margin-top: var(--space-3);
+    }
+
+    [data-theme="light"] .religion-box-title {
+      color: #2a5295;
+    }
   </style>
 </head>
 <body>
@@ -1098,6 +1191,7 @@
   <a href="#naziera" class="nav-pill">The Nazi Era</a>
   <a href="#postwar" class="nav-pill">Post-War</a>
   <a href="#usa" class="nav-pill">American Branch</a>
+  <a href="#today" class="nav-pill">The Name Today</a>
   <a href="#references" class="nav-pill">References</a>
 </nav>
 
@@ -1241,6 +1335,28 @@
       </div>
     </div>
   </div>
+
+  <!-- CHAPTER 1: RELIGION BOX -->
+  <div class="religion-box reveal" style="margin-top: var(--space-10);">
+    <div class="religion-box-title">Religious Context: The Medieval Catholic World, 13th–15th Century</div>
+    <p>The Schödler family's 13th-century existence was entirely shaped by Catholic Christianity. There was no alternative. The medieval Church was not a voluntary institution — it was the foundational structure of European civilization, governing birth, marriage, burial, landholding, education, and political legitimacy (Southern, 1970). For a minor noble family like the Schödlers, religious observance was not separable from social identity.</p>
+    <p>The Fourth Lateran Council (1215), convened by Pope Innocent III, codified universal Catholic practice: the seven sacraments were formally defined, annual confession and communion became obligatory for all the faithful, and the doctrine of transubstantiation was declared (Tanner, 1990). These decrees reached every parish in the Rhineland within a generation. They structured the calendar, the rhythms of agricultural work, and the rituals surrounding birth, marriage, and death.</p>
+    <p>Noble families like the Schödlers carried specific religious obligations beyond those of ordinary Christians. They were expected to endow parishes, found or patronize monasteries, and provide for chantry priests who would pray for their souls after death. The phrase "pro remedio animae" — for the remedy of one's soul — appears repeatedly in medieval noble charters precisely because the eternal fate of one's lineage was understood to depend on such patronage (Southern, 1970). A nobleman's piety was inseparable from his political standing.</p>
+    <p>The Catholic Church also controlled the vast majority of literate culture in this era. Bishops were frequently drawn from noble families — the Rhineland's ecclesiastical lords (archbishop-electors of Cologne, Mainz, and Trier) wielded temporal power over vast territories. For families of the Schödlers' rank, placing sons in the Church was a standard strategy for securing influence and career advancement (Wilson, 2016).</p>
+    <p>Walther Schödel (1398, Mengen), recorded by the Heraldry Institute of Rome (2018) as a <em>priest</em>, may represent exactly this strategy: a lesser branch of the family channeling a son into holy orders as a path to education, income, and social standing when landed inheritance was unavailable.</p>
+  </div>
+
+  <!-- CHAPTER 1: RESEARCH QUESTIONS -->
+  <div class="research-box reveal">
+    <div class="research-box-title">Questions for Further Research</div>
+    <ol>
+      <li><strong>Noble religious patronage in the upper Rhine, 13th–15th centuries:</strong> What patterns of parish endowment, monastery founding, and chantry establishment characterized the minor nobility in the Rhine provinces between 1200 and 1400? Were families of the Schödlers' rank — those receiving imperial arms grants but not holding large territorial fiefs — more or less likely to pursue religious patronage as a social strategy compared to higher nobility?</li>
+      <li><strong>The Carolingian lineage problem:</strong> The Berks County Annals attributes Schödler origins to the court of Charlemagne. How common were such 9th-century attribution claims in 19th-century German-American family genealogies, and what methodologies have historians used to distinguish oral tradition from documented lineage in this corpus? A systematic study of J.H. Beers &amp; Company publications across multiple states could illuminate how self-submitted county histories constructed and standardized family origin myths.</li>
+      <li><strong>Clerical and artisan branching in medieval German noble families:</strong> Walther Schödel (1398) appears as a priest; Eberwinus Schödel (1333) appears as a glove-maker. What drove the social bifurcation of lesser noble families into clerical and artisan tracks in 14th-century German cities? Freed (1992) identifies this as common, but a focused comparative study of the upper Rhine region could test whether religious vocation or guild craft was more common for displaced minor knights.</li>
+      <li><strong>Imperial arms grants and the Regesta Imperii:</strong> The Schödler heraldic grant is said to derive from Emperor Rudolf I (though the 1260 date precedes his reign). A systematic search of the Regesta Imperii database for Schödler, Schödel, and variant spellings between 1270 and 1320 could determine whether a primary record survives. This would move the family's documented history from family tradition to verified archive — a significant contribution to genealogical scholarship on German immigrant families.</li>
+    </ol>
+    <p class="research-box-note">These questions are suitable for graduate theses in medieval history, genealogical studies, German immigration history, or religious history of the Holy Roman Empire.</p>
+  </div>
 </section>
 
 <div class="section-divider"></div>
@@ -1291,6 +1407,30 @@
       <div class="context-box-title">The Palatinate Connection</div>
       <p>The Pennsylvania Germans — who share geographic origins with the Schödel family — came predominantly from the Palatinate and surrounding Rhine territories. Historian Aaron Fogleman (1996) estimated approximately 85,000 German-speakers migrated to the American colonies between 1700 and 1775, with the single largest wave occurring between 1749 and 1754 when economic hardship in the Rhine provinces drove mass departure.</p>
       <p>The cultural and geographic overlap between the Rhine provinces that gave rise to the Schödel noble lineage and the emigration patterns that produced the Pennsylvania Schoedler family cannot be coincidental — both stories begin in the same river valleys, among the same class of people.</p>
+    </div>
+
+    <!-- CHAPTER 2: RELIGION BOX -->
+    <div class="religion-box reveal" style="margin-top: var(--space-10);">
+      <div class="religion-box-title">Religious Context: Reformation, Schism, and War, 1517–1648</div>
+      <p>The period 1400–1800 encompassed the most traumatic religious rupture in Western history since the Great Schism. For the Schödel family — living in the Rhine provinces and Upper Franconia — these were not distant events. They determined which church one attended, who could govern the land, and sometimes whether one survived at all.</p>
+      <p>The <strong>Protestant Reformation</strong>, launched by Martin Luther's <em>Ninety-Five Theses</em> in 1517, spread with remarkable speed across the German lands. The Peace of Augsburg (1555) codified the principle of <em>cuius regio, eius religio</em> — "whose realm, his religion." This meant that a family's faith was determined by its ruler. If your prince converted to Lutheranism, you were expected to become Lutheran. If he remained Catholic, you remained Catholic (Brady, 2009).</p>
+      <p>The Rhineland and Palatinate became a patchwork of confessional territories. The Electoral Palatinate — centered on Heidelberg — took a dramatic turn in 1563 when Elector Frederick III commissioned the <strong>Heidelberg Catechism</strong>, converting the region from Lutheranism to Reformed (Calvinist) Christianity. This made the Palatinate one of the most significant Reformed strongholds in the Holy Roman Empire (Prestwich, 1985).</p>
+      <p>Upper Franconia — the region encompassing Münchberg, where the Schödel family is best documented in later centuries — was predominantly <strong>Lutheran</strong>, not Reformed. The city of Bayreuth and the surrounding Gau Oberfranken had converted to Lutheranism in the 1520s and 1530s under the Hohenzollern margraves, who controlled Franconia (Brady, 2009). This Lutheran identity persisted into the 20th century, shaping the region's political and social culture in ways directly relevant to the Nazi era.</p>
+      <p>The <strong>Thirty Years' War</strong> (1618–1648) began as a religious conflict between Catholic and Protestant princes but evolved into a general European war involving Spain, France, Sweden, and the German states. Its devastation was biblical in scale. Reliable historical estimates document 4.5 to 8 million deaths directly attributable to combat, plague, and famine across German territories (Wilson, 2009). Some regions lost 50% or more of their population. The Swedish army alone destroyed 2,200 castles, 18,000 villages, and 1,500 towns during the conflict (Parker, 1997).</p>
+      <p>Communities paid <em>Brandschatzung</em> — fire-tribute or protection money — to invading armies simply to avoid destruction. The minor nobility suffered catastrophic losses: their estates were burned, their tenants killed or scattered, and the legal-economic infrastructure sustaining noble status collapsed in many territories (Wilson, 2009). The Berks County Annals' claim that the Schödler noble line "died out" and surviving members "abandoned the title of nobility" maps almost exactly onto the timeline of the Thirty Years' War's aftermath.</p>
+      <p>The Peace of Westphalia (1648), which ended the war, granted equal legal standing to the Reformed (Calvinist) confession alongside Lutheranism and Catholicism — institutionalizing the religious diversity that families across the Rhine provinces would live with for the next two centuries. It also ended the principle that rulers could impose their religion on subjects, allowing a degree of confessional pluralism that would eventually make emigration to religiously tolerant Pennsylvania attractive (Brady, 2009).</p>
+    </div>
+
+    <!-- CHAPTER 2: RESEARCH QUESTIONS -->
+    <div class="research-box reveal">
+      <div class="research-box-title">Questions for Further Research</div>
+      <ol>
+        <li><strong>Confessional identity and social mobility in post-Reformation Franconia:</strong> Upper Franconia was predominantly Lutheran by the mid-16th century. Did the Lutheran confessional identity of Münchberg and its surrounding region shape the trajectory of guild admission, civic office, and business formation differently than in Reformed or Catholic territories nearby? Comparative regional studies could test whether confessional identity systematically shaped Mittelstand formation across the Rhineland and Franconia.</li>
+        <li><strong>The Thirty Years' War and the dissolution of the minor nobility:</strong> The Berks County Annals report the Schödler noble line dying out and survivors abandoning nobility — a claim structurally consistent with the documented destruction of the minor nobility during and after 1618–1648. Could archival research in Bavarian state records and Kirchenbücher document the specific impact on the Schödel/Schödler family in Upper Franconia during this period? Wilson (2009) and Parker (1997) provide the macro framework; family-level microhistory remains undone.</li>
+        <li><strong>Brandschatzung, rural communities, and collective survival:</strong> How did communities in Upper Franconia organize collective responses to military extortion during the Thirty Years' War? A microhistorical study of Münchberg or neighboring towns in Gau Oberfranken during 1618–1648 could illuminate the strategies by which artisan and craft-guild communities survived while the noble class above them collapsed — directly relevant to the Schödel family's social transition.</li>
+        <li><strong>The Heidelberg Catechism and confessional politics in the Rhine-Franconia borderlands:</strong> The Electoral Palatinate's adoption of Reformed theology in 1563 created a confessional border between Reformed and Lutheran territories in exactly the region where the Schödler family is documented. Did confessional difference shape family migration, marriage alliances, or guild access for minor noble families along this border? This question sits at the intersection of religious history and social history.</li>
+      </ol>
+      <p class="research-box-note">These questions are suitable for graduate theses in early modern European history, Reformation studies, German social history, or the history of the Holy Roman Empire.</p>
     </div>
   </div>
 </section>
@@ -1372,6 +1512,18 @@
       </div>
     </div>
   </div>
+
+  <!-- CHAPTER 3: RESEARCH QUESTIONS -->
+  <div class="research-box reveal" style="max-width: var(--content-default); margin-left: auto; margin-right: auto; margin-top: var(--space-10); padding-left: var(--space-5); padding-right: var(--space-5);">
+    <div class="research-box-title">Questions for Further Research</div>
+    <ol>
+      <li><strong>Religion and the Mittelstand in Lutheran Upper Franconia:</strong> The Friedrich Schoedel firm operated in a predominantly Lutheran community across its full 123-year history. Did Lutheran theology — particularly its tradition of <em>Beruf</em> (vocation as divine calling, articulated by Luther) and its emphasis on diligence in one's earthly station — shape the organizational culture and intergenerational succession strategies of Münchberg's textile Mittelstand? Weber's (1905) thesis on Protestantism and capitalism provides a theoretical frame, but it focused on Calvinism; a Lutheran Mittelstand study would be a genuine scholarly contribution.</li>
+      <li><strong>The 1943 seizure and wartime industrial coercion:</strong> The Nazi regime seized the Friedrich Schoedel factory for armaments production in 1943. What were the legal mechanisms by which the Wehrmacht and the Reich Economics Ministry (<em>Reichswirtschaftsministerium</em>) organized industrial seizures of Mittelstand firms in this period? Specifically, were Münchberg textile firms targeted as a cluster, or individually? Business history research drawing on Bundesarchiv records could answer this for the textile district of Upper Franconia.</li>
+      <li><strong>Vertical integration in German textile Mittelstand firms, 1880–1940:</strong> Friedrich Schoedel added a spinning building in 1925–26, extending vertical integration. How common was this strategy among Bavaria's small and medium textile firms during the Weimar period, and did firms that integrated vertically demonstrate greater survival rates through the Depression? This is a question in business history and industrial organization with well-documented precedents in Fear et al. (2006) and Simon (1996).</li>
+      <li><strong>The last German niche manufacturer problem:</strong> By its closure in 2008, Friedrich Schoedel GmbH was the sole German manufacturer of inelastic corset fabric. What industrial policy, market forces, and firm-level decisions explain why a small Bavarian family firm survived global deindustrialization long enough to become the last practitioner of a once-common craft? This question touches industrial geography, trade economics, and family firm succession theory.</li>
+    </ol>
+    <p class="research-box-note">These questions are suitable for graduate theses in business history, German economic history, industrial sociology, or organizational behavior.</p>
+  </div>
 </section>
 
 <div class="section-divider"></div>
@@ -1414,6 +1566,17 @@
           <p class="card-body">The Nazi Party's growth from a fringe movement (2.6% in 1928) to Germany's largest party (37.3% in July 1932) was concentrated in precisely the social and geographic territories where the Schödels lived and worked (Geary, 1998). Gau Oberfranken — the electoral district encompassing Münchberg — was among the NSDAP's strongest regional bases in Bavaria. Understanding this political geography is essential context for interpreting Schödel NSDAP membership records.</p>
         </div>
       </div>
+    </div>
+
+    <!-- CHAPTER 4: RESEARCH QUESTIONS -->
+    <div class="research-box reveal" style="margin-top: var(--space-10);">
+      <div class="research-box-title">Questions for Further Research</div>
+      <ol>
+        <li><strong>Religion, economic crisis, and NSDAP support in Protestant Bavaria:</strong> Multiple scholars have noted that predominantly Protestant regions of Germany — including Upper Franconia — showed higher NSDAP electoral support than predominantly Catholic regions (Falter, 1991; Geary, 1998). Did Lutheran theological culture — particularly Luther's own doctrine of submission to temporal authority (<em>Obrigkeit</em>) — predispose Protestant communities to political authoritarianism in the Weimar crisis? This is among the most contested questions in the historiography of Nazism and requires both theological and political historical analysis.</li>
+        <li><strong>The Mittelstand and NSDAP membership — economic distress versus ideology:</strong> Kater (1983) documents the lower middle class's overrepresentation in NSDAP membership. Using the newly digitized NSDAP membership files (NARA Record Group 242, 2026), a graduate researcher could now test whether Mittelstand members joined before or after the 1929 crash, whether their business type correlates with join date, and whether geographic proximity to Nazi electoral strongholds predicts earlier joining — generating findings far more granular than were possible with pre-digitization sampling methods.</li>
+        <li><strong>Hyperinflation and business continuity in Weimar's textile sector:</strong> The Friedrich Schoedel factory temporarily closed in 1933. What was the comparative survival rate of small textile firms in Upper Franconia through the 1923 hyperinflation and 1929–1933 depression? Did firms that survived both crises share common structural characteristics — family ownership, vertical integration, niche markets — or were survival outcomes largely random? Bavarian state archive records and trade association files from this period could support a systematic study.</li>
+      </ol>
+      <p class="research-box-note">These questions are suitable for graduate theses in German political history, economic history, sociology of religion, or history of the Weimar Republic.</p>
     </div>
   </div>
 </section>
@@ -1558,6 +1721,37 @@
         View Primary Source: NARA NSDAP Membership Cards — Reel U0026 →
       </a>
     </div>
+
+    <!-- CHAPTER 5: KIRCHENKAMPF BOX -->
+    <div class="religion-box reveal" style="margin-top: var(--space-10); border-left-color: var(--color-danger);">
+      <div class="religion-box-title" style="color: #c97070;">Religious Context: The Kirchenkampf — Church Struggle Under Nazism</div>
+      <p>The Nazi regime's relationship with Christianity was one of the defining tensions of the Third Reich. It was not straightforward persecution — the Nazis could not afford direct confrontation with a faith held by the vast majority of Germans. Instead, they attempted to co-opt, manipulate, and gradually hollow out the churches from within (Evans, 2004).</p>
+      <p>The regime promoted a movement called the <strong>Deutsche Christen</strong> (German Christians), which sought to merge Nazi racial ideology with Protestant Christianity. The German Christians rejected the Old Testament as "Jewish scripture," sought to expunge Jewish names from hymns, and proclaimed a "Positive Christianity" that aligned faith with blood, soil, and the German nation (Ericksen, 2012). At their peak in 1933, the German Christians controlled a majority of seats in Protestant church assemblies.</p>
+      <p>In response, a group of pastors and theologians organized the <strong>Bekennende Kirche</strong> (Confessing Church) in 1934, led by figures including Martin Niemöller and Dietrich Bonhoeffer. The Barmen Declaration (1934), largely drafted by the Swiss theologian Karl Barth, rejected the German Christians' ideology and asserted the independence of the Church from state control (Busch, 1976). At its peak, approximately 6,000 pastors affiliated with the Confessing Church — a significant minority within German Protestantism, though the movement was suppressed and largely dissolved by 1936.</p>
+      <p>The Catholic Church navigated its own compromised position. The Concordat of July 1933 — signed between the Vatican and the Nazi government — required the Church to abstain from political activity in exchange for guarantees protecting Catholic institutions. The Nazis violated the Concordat repeatedly. Pope Pius XI's encyclical <em>Mit brennender Sorge</em> (With Burning Concern, 1937) condemned Nazi violations of the agreement and was smuggled into Germany to be read from Catholic pulpits — an act of public resistance unprecedented in the Reich (Rhodes, 1973). But it came too late to halt the Church's institutional subordination.</p>
+      <p>For families in Upper Franconia — a predominantly Lutheran region — the church struggle played out in local parish elections, theological debates, and the quiet question of which pastor stood in the pulpit. The Confessing Church's influence was uneven: stronger in university towns like Erlangen (home of Dr. Heinrich Schoedel, the physician-NSDAP member) than in smaller rural communities. Historians have estimated that between one-third and one-half of German Protestant churches were effectively captured by German Christian theology by 1934 (Ericksen, 2012).</p>
+      <p>Scholars have also established a geographic correlation that is directly relevant to the Schödel case: traditionally <strong>Catholic regions</strong> of Germany — Bavaria's south, the Rhineland — showed lower NSDAP vote shares in the 1932 elections than predominantly <strong>Protestant regions</strong> like Upper Franconia (Falter, 1991). Gau Oberfranken, where multiple Schödel NSDAP members are recorded, was both heavily Lutheran and among the strongest NSDAP electoral bases in Bavaria — a correlation that was not coincidental.</p>
+    </div>
+
+    <!-- CHAPTER 5: GLEICHSCHALTUNG BOX -->
+    <div class="context-box reveal" style="margin-top: var(--space-6);">
+      <div class="context-box-title">What NSDAP Membership Actually Required: The Gleichschaltung</div>
+      <p><em>Gleichschaltung</em> — "coordination" or "alignment" — was the Nazi policy of bringing all aspects of German public life under party control. From professional associations to sports clubs to church councils, every institution was expected to conform to Nazi ideology. For individuals, this meant that non-membership in the NSDAP could translate into exclusion from business contracts, guild licenses, professional associations, and social organizations.</p>
+      <p>The Abel Collection (1934), a set of personal testimonies solicited by sociologist Theodore Abel from NSDAP members, has been analyzed in detail by the Harvard research team (Bosshart &amp; Weigand, 2026). The two most commonly reported motivations for joining were <strong>national renewal and desire for order</strong> (cited more frequently than antisemitism) and <strong>social belonging</strong> — the desire not to be excluded from community life. This evidence complicates any simple narrative of ideological conviction as the primary driver of mass membership.</p>
+      <p>By 1939, NSDAP membership had reached approximately 8.5 million. By 1945, cumulative enrollment exceeded 11 million — roughly one in six adult Germans (Bosshart &amp; Weigand, 2026). For Gerhard Schoedel of Münchberg, joining at age 18 in 1940, the wartime context meant that non-membership could signal disloyalty in a community already deeply penetrated by party organization.</p>
+    </div>
+
+    <!-- CHAPTER 5: RESEARCH QUESTIONS -->
+    <div class="research-box reveal" style="margin-top: var(--space-10);">
+      <div class="research-box-title">Questions for Further Research</div>
+      <ol>
+        <li><strong>The Kirchenkampf in Upper Franconia at the parish level:</strong> The Confessing Church's resistance to Nazi co-option of German Protestantism was geographically and institutionally uneven. A focused study of parish records, synodal minutes, and church council elections in Münchberg and Gau Oberfranken during 1933–1938 could document how many local churches affiliated with the German Christians versus the Confessing Church, and whether NSDAP membership among clergy correlated with German Christian affiliation. Ericksen (2012) provides the framework; local archival work remains sparse for Upper Franconia specifically.</li>
+        <li><strong>The Confessing Church, professional status, and personal risk:</strong> Dietrich Bonhoeffer's biography illustrates the extreme consequences of resistance — he was executed in 1945. But most Confessing Church pastors faced subtler pressures: surveillance, salary withholding, professional ostracism. A graduate study could examine the socioeconomic profile of Confessing Church clergy in Bavaria and compare it to German Christian clergy — testing whether educational attainment, family wealth, or theological training predicted the willingness to resist.</li>
+        <li><strong>NSDAP membership timing and the Schödel records — a methodological case study:</strong> The digitized NSDAP membership files now permit systematic analysis that was previously impossible. Using the seven Schödel/Schoedel records identified in NARA Record Group 242, a researcher could design a methodological case study: how do membership number sequences, geographic Gau data, and join dates together allow interpretation of motivation? This would serve as a methodological contribution demonstrating how digitized membership archives can support genealogically motivated historical inquiry.</li>
+        <li><strong>The Catholic Concordat of 1933 and its violation — institutional church response:</strong> Pope Pius XI signed the Concordat in July 1933, the same month the Enabling Act gave Hitler dictatorial powers. The encyclical <em>Mit brennender Sorge</em> (1937) followed years of documented Nazi violations. What were the specific violations between 1933 and 1937 that led to the encyclical, and how did German Catholics — particularly those in predominantly Lutheran regions like Upper Franconia who were already a confessional minority — experience the Concordat's failure? Rhodes (1973) provides the Vatican perspective; Catholic minority experience in Protestant Germany is understudied.</li>
+      </ol>
+      <p class="research-box-note">These questions are suitable for graduate theses in the history of Christianity in the Third Reich, church history, Nazi social history, or religious ethics.</p>
+    </div>
   </div>
 </section>
 
@@ -1628,6 +1822,37 @@
           <p class="card-body">West Germany's economic miracle was not simply the result of Marshall Plan aid. Eichengreen and Ritschl (2008) demonstrate that the primary driver was recovery from the catastrophic wartime TFP shock of 1944–46, combined with Erhard's liberalization reforms. For firms like Friedrich Schoedel GmbH, this recovery provided the demand and stability that allowed Mittelstand enterprises to rebuild, reinvest, and specialize — sustaining the family business through the 1950s and 1960s peak.</p>
         </div>
       </div>
+    </div>
+
+    <!-- CHAPTER 6: DENAZIFICATION BOX -->
+    <div class="context-box reveal" style="margin-top: var(--space-10);">
+      <div class="context-box-title">Denazification: Persilscheine and the Limits of Justice</div>
+      <p>Denazification was the Allied policy of purging Nazi ideology from German public life. In the American zone — which included Upper Franconia and Münchberg — this was carried out through <em>Spruchkammern</em> (denazification tribunals) that classified each individual into one of five categories: Major Offender, Offender, Lesser Offender, Follower, and Exonerated.</p>
+      <p>In practice, the system was overwhelmed by its own scale. Nearly 13 million Germans were subject to denazification proceedings. Only 1.4% were classified in the two most serious categories — Major Offenders or Offenders (AlliiertenMuseum, 2024). The vast majority received Follower or Exonerated classifications, often aided by <em>Persilscheine</em> — so named after the German laundry detergent brand Persil — sworn character attestations from friends, neighbors, and colleagues vouching for the subject's fundamental decency. These "whitewash certificates" flooded the tribunals.</p>
+      <p>The social dynamics of Persilscheine in small communities like Münchberg are historically significant. In a town where families had lived for generations, social capital could be converted into legal exculpation. Business relationships, church affiliations, and neighborhood ties all became resources in the denazification process.</p>
+      <p>By 1951, West Germany enacted Law 131, which reinstated large numbers of former civil servants — including those with Nazi affiliations — into federal employment. Cold War realpolitik demanded a functioning, stable West German state, and that state needed experienced administrators. The consequence was a rapid normalization of former NSDAP members back into professional and civic life (Kater, 1983).</p>
+    </div>
+
+    <!-- CHAPTER 6: RELIGION + VERGANGENHEITSBEWÄLTIGUNG BOX -->
+    <div class="religion-box reveal" style="margin-top: var(--space-6);">
+      <div class="religion-box-title">Religious Context: Post-War Faith, Secularization, and Coming to Terms with the Past</div>
+      <p>The post-war period produced a profound crisis of religious identity in Germany. How could the churches account for their role — through silence, collaboration, or institutional compromise — during the Nazi years? Both the Protestant and Catholic churches faced this question directly, and both initially avoided it.</p>
+      <p>The Protestant response came in the <strong>Stuttgart Declaration of Guilt</strong> (October 1945), in which the Council of the Evangelical Church in Germany acknowledged that German Protestants had failed to bear clear witness against Nazi crimes. The declaration was carefully worded — it acknowledged "guilt" without fully specifying what that guilt entailed — and was contested by many within German Protestantism as too broad an indictment (Barnett, 1992).</p>
+      <p>The Catholic Church in West Germany was slower to confront its wartime accommodation. The process of <strong><em>Vergangenheitsbewältigung</em></strong> — "working through the past" — became a defining cultural project for West Germans of the postwar generations. For families with NSDAP membership records, this generational reckoning was personal as well as political. Children who came of age in the 1960s and 1970s increasingly demanded accounting from their parents and grandparents.</p>
+      <p>The student movements of 1968 in West Germany were, in significant part, a demand for honest confrontation with the Nazi era — a rejection of the silence that had characterized the Adenauer-era <em>Wiederaufbau</em> (reconstruction) culture, in which economic success had been implicitly treated as redemption (Evans, 2008). The sociologists Alexander and Margarete Mitscherlich, in their 1967 work <em>The Inability to Mourn</em>, argued that West Germans had collectively repressed authentic grief and guilt about the Holocaust, substituting economic activity for moral accounting (Mitscherlich &amp; Mitscherlich, 1967).</p>
+      <p>At the same time, West Germany underwent accelerating <strong>secularization</strong>. The percentage of West Germans identifying as members of the two main Christian confessions declined from roughly 95% in 1950 to under 60% by 2020 (Destatis, 2023). Upper Franconia, historically Lutheran, followed this pattern: church attendance declined steadily from the 1960s onward, and formal confessional identity became less central to community life. For families like the Schödels of Münchberg, this meant a gradual loosening of the religious bonds that had structured community life for four centuries.</p>
+    </div>
+
+    <!-- CHAPTER 6: RESEARCH QUESTIONS -->
+    <div class="research-box reveal" style="margin-top: var(--space-6);">
+      <div class="research-box-title">Questions for Further Research</div>
+      <ol>
+        <li><strong>The Stuttgart Declaration of Guilt and its reception in Upper Franconia:</strong> The 1945 Protestant guilt declaration was contested within German Protestantism. How was it received in Lutheran communities in Upper Franconia — a region where NSDAP membership rates had been high and where Confessing Church resistance had been limited? Local synodal archives and church newsletters from 1945–1950 could document whether Stuttgart's language of guilt was affirmed, resisted, or simply ignored in communities like Münchberg.</li>
+        <li><strong>Persilscheine networks in Mittelstand communities:</strong> The denazification system's vulnerability to social-capital manipulation was particularly pronounced in small towns with dense community networks. A microhistorical study of denazification proceedings in a small Bavarian industrial town — using Bavarian state archive denazification records — could map the social networks through which Persilscheine were exchanged, testing whether church membership, guild affiliation, or business relationships were the most predictive factors.</li>
+        <li><strong>Vergangenheitsbewältigung and the second generation in German family firms:</strong> How did the children of NSDAP members who owned Mittelstand firms manage the inheritance of both business and moral legacy? Business history and family sociology have not systematically addressed this question. A study combining firm history interviews with the Mitscherlichs' (1967) psychological framework and the historical context of 1960s German student protest could illuminate a significant gap in family firm historiography.</li>
+        <li><strong>Secularization trajectories in predominantly Lutheran German regions, 1950–2020:</strong> Upper Franconia's secularization parallels the broader West German trend, but Lutheran and Catholic regions may have secularized at different rates and for different reasons. A comparative study of confessional decline in Lutheran Upper Franconia versus Catholic Bavaria could test whether the wartime compromise of the Protestant churches — more publicly debated through the Stuttgart Declaration — accelerated Lutheran secularization relative to Catholicism.</li>
+      </ol>
+      <p class="research-box-note">These questions are suitable for graduate theses in modern German history, sociology of religion, church history, family business history, or contemporary European religious change.</p>
     </div>
   </div>
 </section>
@@ -1710,6 +1935,124 @@
       </div>
     </div>
   </div>
+
+  <!-- CHAPTER 7: RELIGION BOX -->
+  <div class="religion-box reveal" style="margin-top: var(--space-10);">
+    <div class="religion-box-title">Religious Context: Pennsylvania German Religion — Lutheran, Reformed, and Beyond</div>
+    <p>The Pennsylvania Schoedlers arrived into one of the most religiously diverse communities in the colonial world. William Penn had guaranteed religious toleration in his colony by design, and this toleration attracted an extraordinary mix of German-speaking confessions: Lutheran, Reformed (Calvinist), Mennonite, Amish, Moravian, Baptist, and Catholic communities all settled within Berks County and the surrounding Pennsylvania German communities (Fogleman, 1996).</p>
+    <p>The majority of German immigrants to Pennsylvania came from Lutheran or Reformed backgrounds — scholars estimate approximately 90% (Gardner Library, 2003). But the two confessions did not maintain strict separation. The practical reality of frontier life, scattered settlements, and limited clergy meant that Lutheran and Reformed communities frequently shared church buildings and pastors — the famous "union churches" of Pennsylvania German culture. A Lutheran pastor noted as early as 1747 the prevalence of mixed households: Lutheran husbands with Reformed wives, and vice versa, with intermarriage so common that confessional boundaries were largely social rather than theological (Fogleman, 1996).</p>
+    <p>The strongest single signal about the American branch's religious identity comes from the Berks County Annals itself: <strong>Rev. Dr. D.E. Schoedler of Allentown, Pennsylvania</strong> — the only named family source in the 1907 entry — was a <em>licensed, ordained Lutheran minister</em>. The Annals describe him as holding a <em>Geschlechts-Wappen</em> (a German heraldic family document) that he "cannot interpret," suggesting it was written in older German script (Historical &amp; Biographical Annals of Berks County, 1907). Rev. Dr. Schoedler's ministerial standing marks him as both a community leader and a carrier of the family's confessional identity across generations.</p>
+    <p>Pennsylvania German religious culture in the 18th and 19th centuries was deeply shaped by the absence of formal vital registration. Pennsylvania did not require civil registration of births, marriages, and deaths until 1906 — meaning that for the entire colonial and most of the national period, church records were the primary documentation of family events. Baptismal registers, confirmation records, marriage entries, and burial records in Lutheran and Reformed churches constitute the foundational genealogical archive for Pennsylvania German families (Fogleman, 1996).</p>
+    <p>This means that the Schoedlers' religious affiliation was not merely a private matter — it was the primary bureaucratic record-keeping system for their existence. Every birth, marriage, and death in the family was registered, if at all, through the church. The choice of church was therefore also a choice about which community would hold memory of the family.</p>
+    <p>Berks County's religious landscape was particularly varied. Beyond Lutheran and Reformed congregations, the county contained Mennonite and Amish communities in the western townships, Moravian settlements centered on Bethlehem (nearby Northampton County), and a growing Catholic presence from later waves of Irish and German immigration. The townships of Longswamp, Maxatawny, and Richmond — where the Schoedlers settled — were predominantly German Protestant, with Lutheran congregations well-established by the mid-18th century (Conzen, 1980).</p>
+    <p>The westward migration of Schoedels from Pennsylvania to Illinois, Missouri, and Maryland (documented by Forebears.io data, ca. 2024) tracks the broader movement of German-American communities in the 19th century. As they moved west, they brought their confessional identities with them — establishing Lutheran churches in new communities as the frontier advanced. By the 20th century, religious evolution had occurred: Bernice Schoedel (1948–2025) of Chicago was Catholic, worshipping at St. Ferdinand Church — a shift from the Lutheran origins of the Pennsylvania branch that reflects the broader American Catholic emergence in the late 19th and 20th centuries.</p>
+  </div>
+
+  <!-- CHAPTER 7: RESEARCH QUESTIONS -->
+  <div class="research-box reveal" style="margin-top: var(--space-6);">
+    <div class="research-box-title">Questions for Further Research</div>
+    <ol>
+      <li><strong>Pennsylvania German union churches as social institutions:</strong> The union church model — in which Lutheran and Reformed congregations shared buildings, pastors, and sometimes records — is a distinctive feature of Pennsylvania German religious culture. A study examining how union churches managed doctrinal difference in practice, how they handled mixed-confession marriages, and how their records were maintained could contribute to both religious history and genealogical methodology. The townships where the Schoedlers settled are well represented in surviving church record collections.</li>
+      <li><strong>Rev. Dr. D.E. Schoedler and the German-American Lutheran ministerial network:</strong> Rev. Dr. Schoedler was a licensed, ordained minister in Allentown — a city with a significant German Lutheran population. Allentown's Lutheran congregations were part of the broader Pennsylvania ministerium (the oldest Lutheran synodal body in North America). A focused study of the German Lutheran ministry in the Lehigh Valley in the late 19th century, with attention to family connections and theological education, could locate Rev. Dr. Schoedler within a documented professional network — and potentially establish genealogical links backward toward the German Schödler line.</li>
+      <li><strong>The genealogical gap: DNA evidence and Kirchenbücher:</strong> The Berks County Annals explicitly acknowledges that "no connecting link" between German Schödlers and American Schoedlers has been established. Two research strategies could close or narrow this gap: (a) systematic review of surviving Lutheran Kirchenbücher (church books) in Upper Franconia and the Palatinate, using the Family History Library's digitized German church records; (b) comparative Y-chromosome DNA analysis between documented Schoedel descendants and documented Schödel lines in Germany. This represents a genuinely open genealogical research question of interest to a large diaspora family.</li>
+      <li><strong>Religious identity and westward migration in Pennsylvania German communities:</strong> The migration of Schoedels from Berks County, Pennsylvania to Illinois, Missouri, and Maryland in the 19th century follows documented patterns of Pennsylvania German westward movement. Did religious institutions — specifically Lutheran synods — facilitate this migration by establishing frontier churches that provided network connections? Fogleman (1996) documents the colonial settlement; the 19th-century westward movement of Pennsylvania German families is less systematically studied.</li>
+    </ol>
+    <p class="research-box-note">These questions are suitable for graduate theses in American religious history, Pennsylvania German studies, German-American immigration history, or historical genealogy methodology.</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 8: THE NAME TODAY ===== -->
+<section class="band" id="today">
+  <div class="band-inner">
+    <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">VIII</span>
+    <div class="chapter-header reveal">
+      <span class="chapter-era">The 21st Century</span>
+      <h2 class="chapter-title">The Name Today</h2>
+      <p class="chapter-lead">A thousand years after the Schödler family received its imperial coat of arms, the name survives on two continents — uncommon, regional, and still concentrated in the communities where these families first put down roots. This is what the name looks like today.</p>
+    </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div>
+        <div class="section-tag tag-gold">Germany</div>
+        <p class="body-text">According to surname frequency data compiled by Forebears.io (ca. 2024), approximately <strong>1,342 people</strong> carry the Schödel name in Germany today. The name ranks 7,787th nationally — uncommon enough to be considered a regional name, not a broadly distributed one.</p>
+        <p class="body-text" style="margin-top: var(--space-4);">The geographic concentration is striking: of 1,342 Schödels globally, approximately 1,330 live in Germany. The name has not significantly dispersed beyond its home country, despite a century of emigration and displacement. The highest concentrations remain in Bavaria and Upper Franconia — precisely the region where the Friedrich Schoedel textile firm operated for 123 years (Forebears.io, ca. 2024).</p>
+        <p class="body-text" style="margin-top: var(--space-4);">This regional concentration is itself historically informative. It suggests that the Schödel name's distribution in Germany has remained anchored to the Franconian textile economy that sustained the family from the late 18th century onward. Unlike many German surnames that spread during the great internal migrations of the 19th and 20th centuries, the Schödel name remained rooted.</p>
+
+        <div class="stat-strip" style="margin-top: var(--space-6);">
+          <div class="stat-item">
+            <div class="stat-value">1,342</div>
+            <div class="stat-label">Schödels in Germany today (Forebears.io, ca. 2024)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">#7,787</div>
+            <div class="stat-label">Surname rank in Germany — uncommon and regional</div>
+          </div>
+        </div>
+
+        <div class="analysis-box" style="margin-top: var(--space-6);">
+          <div class="analysis-box-title">A Notable Schödel: Heinrich Schödl (1777–1838)</div>
+          <p>Among the historical Schödels not connected to the Münchberg textile line, <strong>Heinrich Schödl</strong> (1777–1838) stands out as an individual of documented artistic significance. Born in Tachau (Bohemia, now Tachov in the Czech Republic), he became a Bohemian miniature and portrait painter of note, working primarily in Prague as the son of a school director (Thieme &amp; Becker, 1907–1950).</p>
+          <p>Schödl's career represents the broader cultural breadth of the surname's distribution: while the Münchberg Schödels built textile wealth in Upper Franconia, a Bohemian branch produced a practicing visual artist working in the imperial capital of the Habsburg world. These parallel lines — textile industrialist and miniature painter — illustrate the diversity within a single German surname's history across the early 19th century.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-tag tag-green" style="margin-top: 0;">United States</div>
+        <p class="body-text">In the United States, approximately <strong>547 people</strong> carry the Schoedel name, according to Forebears.io (ca. 2024). The geographic distribution of American Schoedels tells a story of westward migration from the Pennsylvania origins documented in the 1907 Berks County Annals.</p>
+
+        <div class="stat-strip" style="margin: var(--space-5) 0;">
+          <div class="stat-item">
+            <div class="stat-value">547</div>
+            <div class="stat-label">Schoedels in the USA today (Forebears.io, ca. 2024)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">11%</div>
+            <div class="stat-label">Concentrated in Illinois — the largest state share</div>
+          </div>
+        </div>
+
+        <p class="body-text">The largest concentration is in <strong>Illinois (11%)</strong>, followed by <strong>Missouri (10%)</strong> and <strong>Maryland (5%)</strong>. This distribution reflects the documented westward movement of Pennsylvania German families through the 19th century: Maryland was a natural first step from Pennsylvania; the Ohio and Mississippi River valleys drew settlers into Illinois and Missouri (Conzen, 1980).</p>
+        <p class="body-text" style="margin-top: var(--space-4);">Notable 21st-century American Schoedels include <strong>Bernice Schoedel (1948–2025)</strong> of Chicago, Illinois, who was a member of St. Ferdinand Church — a Catholic parish, signaling the religious evolution of the family from its Pennsylvania German Lutheran roots. Her Chicago location is consistent with the Illinois concentration documented in surname frequency data.</p>
+        <p class="body-text" style="margin-top: var(--space-4);"><strong>Barry P. Schoedel</strong> of San Antonio, Texas — the compiler of this presentation — represents a continuation of the Schoedel entrepreneurial tradition documented across both continents: founder of Schoedel Systems Design LLC (web-based technology systems), founder of Catholic.Work (nonprofit), and doctoral student at the University of Miami in Applied Learning Sciences.</p>
+
+        <div class="usa-bridge" style="margin-top: var(--space-5);">
+          <h3>🗺️ The Migration Path</h3>
+          <p>Berks County, PA (1749–1754 peak arrival) → Westward migration along the National Road and Ohio River valley → Illinois, Missouri, Maryland concentrations (19th–20th century) → Contemporary dispersion including Chicago, San Antonio, and beyond</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CH8: RELIGION BOX -->
+    <div class="religion-box reveal" style="margin-top: var(--space-10);">
+      <div class="religion-box-title">Religious Evolution: From Lutheran Rhineland to Catholic Chicago</div>
+      <p>The religious trajectory of the American Schoedel family across three centuries mirrors the broader story of German-American religious life. The first Pennsylvania Schoedlers arrived into a world where Lutheran and Reformed Christianity were the dominant options. The presence of Rev. Dr. D.E. Schoedler of Allentown as an ordained Lutheran minister in the late 19th century marks the peak of the family's Lutheran institutional connection.</p>
+      <p>As Schoedels migrated westward in the 19th century, they encountered a changing religious landscape. German-American Catholic parishes multiplied rapidly in the Midwest from the 1840s onward, as waves of Catholic immigrants from Germany, Ireland, and later Eastern Europe reshaped the urban religious geography of cities like Chicago. Intermarriage with Catholic families was common in these ethnically diverse urban environments.</p>
+      <p>Bernice Schoedel's membership at St. Ferdinand Church in Chicago — a Catholic parish with deep roots in Chicago's German and Polish Catholic communities — reflects this trajectory. The shift from Lutheran to Catholic over approximately two to three generations is not unusual in the German-American family history literature; it reflects a broader pattern of confessional assimilation in the American urban Catholic Church (Conzen, 1980).</p>
+      <p>Barry P. Schoedel's founding of Catholic.Work — a nonprofit dedicated to Catholic professional community — continues this Catholic identification while adding a distinctly entrepreneurial dimension that echoes the family's centuries-long tradition of building institutions from the ground up. The Schödlers of 13th-century Rhineland endowed parishes and monasteries. The Schoedels of 21st-century Texas build Catholic digital infrastructure. The impulse, at some level, rhymes.</p>
+    </div>
+
+    <!-- CH8: CLOSING REFLECTION -->
+    <div class="pull-quote reveal">
+      <blockquote>"The Schödel name, wherever it appears — in Upper Franconian weaving mills, in Pennsylvania German townships, in Chicago parishes, in San Antonio technology firms — points back to the same river valleys, the same guild traditions, the same stubborn commitment to building something that lasts."</blockquote>
+      <cite>— Synthesized from MünchBürger e.V. (n.d.); Fogleman (1996); Conzen (1980); Forebears.io (ca. 2024)</cite>
+    </div>
+
+    <!-- CHAPTER 8: RESEARCH QUESTIONS -->
+    <div class="research-box reveal" style="margin-top: var(--space-6);">
+      <div class="research-box-title">Questions for Further Research</div>
+      <ol>
+        <li><strong>Surname distribution as historical evidence:</strong> The extreme regional concentration of the Schödel surname in Bavaria and Upper Franconia — despite a century of German internal migration, two world wars, and postwar displacement — is itself a historical datum requiring explanation. Why did this name not disperse more widely? A study combining surname frequency data with migration history could test whether the name's concentration reflects the Münchberg textile economy's gravitational pull, or patterns of endogamous marriage within a close-knit regional community.</li>
+        <li><strong>The confessional shift in German-American families: Lutheran to Catholic:</strong> The Schoedel family's apparent transition from Pennsylvania German Lutheranism (Rev. Dr. D.E. Schoedler, ordained minister) to Chicago Catholicism (Bernice Schoedel, St. Ferdinand Church) over two to three generations is a microcosm of a broader phenomenon in German-American religious history. A systematic study of German-American confessional change in Midwestern cities between 1870 and 1950 — using parish records, marriage registers, and census data — could establish how common this shift was and what structural factors drove it.</li>
+        <li><strong>Entrepreneurship as a family cultural inheritance:</strong> Both the German and American branches of the Schödel/Schoedel family show a consistent pattern of business founding and institution building across multiple generations. Is this pattern best explained by genetic inheritance, cultural transmission, shared socioeconomic origins, or some combination? This question sits at the intersection of family business research, sociology of entrepreneurship, and the emerging field of behavioral genetics applied to occupational patterns.</li>
+        <li><strong>German-American Catholic institutions in Chicago and the assimilation question:</strong> St. Ferdinand Church in Chicago, where Bernice Schoedel was a parishioner, represents one node in Chicago's German and Polish Catholic institutional network. How did German-American Catholics in Chicago maintain, adapt, or lose distinctive German cultural practices as they assimilated into a broader American Catholic identity through the 20th century? This question draws on Conzen's (1980) framework for German ethnicity and extends it into the Catholic institutional sphere.</li>
+      </ol>
+      <p class="research-box-note">These questions are suitable for graduate theses in American religious history, German-American studies, family sociology, surname studies, or the history of entrepreneurship.</p>
+    </div>
+  </div>
 </section>
 
 <div class="ornamental-sep" aria-hidden="true">· · ✦ · ·</div>
@@ -1752,6 +2095,24 @@
       <li>Wokeck, M. S. (1999). <em>Trade in strangers: The beginnings of mass migration to North America</em>. Penn State University Press.</li>
     </ul>
 
+    <span class="ref-label reveal" style="margin-top: var(--space-8);">Peer-Reviewed Books and Articles (Additional)</span>
+    <ul class="reference-list reveal">
+      <li>Barnett, V. J. (1992). <em>For the soul of the people: Protestant protest against Hitler</em>. Oxford University Press.</li>
+      <li>Brady, T. A., Jr. (2009). <em>German histories in the age of reformations, 1400–1650</em>. Cambridge University Press.</li>
+      <li>Busch, E. (1976). <em>Karl Barth: His life from letters and autobiographical texts</em> (J. Bowden, Trans.). Fortress Press.</li>
+      <li>Ericksen, R. P. (2012). <em>Complicity in the Holocaust: Churches and universities in Nazi Germany</em>. Cambridge University Press. <a href="https://doi.org/10.1017/CBO9781139030816" target="_blank">https://doi.org/10.1017/CBO9781139030816</a></li>
+      <li>Evans, R. J. (2004). <em>The coming of the Third Reich</em>. Penguin Press.</li>
+      <li>Evans, R. J. (2008). <em>The Third Reich at war</em>. Penguin Press.</li>
+      <li>Mitscherlich, A., &amp; Mitscherlich, M. (1967). <em>Die Unfähigkeit zu trauern: Grundlagen kollektiven Verhaltens</em> [The inability to mourn: Principles of collective behavior]. Piper Verlag.</li>
+      <li>Parker, G. (1997). <em>The Thirty Years' War</em> (2nd ed.). Routledge.</li>
+      <li>Prestwich, M. (Ed.). (1985). <em>International Calvinism, 1541–1715</em>. Clarendon Press.</li>
+      <li>Rhodes, A. (1973). <em>The Vatican in the age of the dictators, 1922–1945</em>. Holt, Rinehart and Winston.</li>
+      <li>Southern, R. W. (1970). <em>Western society and the church in the Middle Ages</em>. Penguin Books.</li>
+      <li>Tanner, N. P. (Ed.). (1990). <em>Decrees of the ecumenical councils</em> (Vol. 1). Georgetown University Press.</li>
+      <li>Thieme, U., &amp; Becker, F. (Eds.). (1907–1950). <em>Allgemeines Lexikon der Bildenden Künstler von der Antike bis zur Gegenwart</em> [General dictionary of fine artists from antiquity to the present] (37 vols.). E.A. Seemann.</li>
+      <li>Wilson, P. H. (2009). <em>Europe's tragedy: A history of the Thirty Years War</em>. Allen Lane.</li>
+    </ul>
+
     <span class="ref-label reveal" style="margin-top: var(--space-8);">Journalism and Institutional Sources</span>
     <ul class="reference-list reveal">
       <li>Wiesen, S. J. (2000, January). German industry and the Third Reich. <em>Dimensions, 13</em>(2). Anti-Defamation League. <a href="https://www.adl.org/resources/news/german-industry-and-third-reich" target="_blank">https://www.adl.org/resources/news/german-industry-and-third-reich</a></li>
@@ -1763,6 +2124,11 @@
       <li>Library of Congress. (n.d.). <em>German genealogy: Emigration from the Palatinate</em>. <a href="https://guides.loc.gov/german-genealogy/emigration-from-germany/palatinate" target="_blank">https://guides.loc.gov/german-genealogy/emigration-from-germany/palatinate</a></li>
       <li>Social History Portal. (2020). <em>Deindustrialization and textile employment, 1970–2000</em>. <a href="https://socialhistoryportal.org/news/articles/311641" target="_blank">https://socialhistoryportal.org/news/articles/311641</a></li>
       <li>University of Hof. (2023). 125 Jahre Königlich Höhere Weberschule in Münchberg: Die historischen Wurzeln. <em>Campuls — Magazin der Hochschule Hof</em>. <a href="https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/" target="_blank">https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/</a></li>
+      <li>AlliiertenMuseum. (2024). <em>Denazification: Allied occupation policy in postwar Germany</em>. AlliiertenMuseum Berlin. <a href="https://www.alliiertenstiftung.de/en/" target="_blank">https://www.alliiertenstiftung.de/en/</a></li>
+      <li>Destatis (Statistisches Bundesamt). (2023). <em>Religious affiliation in Germany, 1950–2020</em>. Federal Statistical Office of Germany. <a href="https://www.destatis.de/EN/Themes/Society-Environment/Population/Religious-Affiliation/_node.html" target="_blank">https://www.destatis.de</a></li>
+      <li>Forebears.io. (ca. 2024). <em>Schödel surname distribution</em>. Forebears. <a href="https://forebears.io/surnames/sch%C3%B6del" target="_blank">https://forebears.io/surnames/schödel</a></li>
+      <li>Forebears.io. (ca. 2024). <em>Schoedel surname distribution</em>. Forebears. <a href="https://forebears.io/surnames/schoedel" target="_blank">https://forebears.io/surnames/schoedel</a></li>
+      <li>Gardner Library. (2003). <em>Pennsylvania German church records: Research guide</em>. Brigham Young University. <a href="https://lib.byu.edu/collections/genealogy/" target="_blank">https://lib.byu.edu</a></li>
     </ul>
 
     <div class="context-box reveal" style="margin-top: var(--space-10);">
@@ -1853,7 +2219,7 @@
     });
 
     // Active pill tracking via scroll position
-    const sections = ['origins','rhineland','business','weimar','naziera','postwar','usa','references'];
+    const sections = ['origins','rhineland','business','weimar','naziera','postwar','usa','today','references'];
     const navBar = document.querySelector('.chapter-nav');
 
     function setActivePill(id) {
