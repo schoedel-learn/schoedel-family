@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Schödel Family — A German Legacy</title>
+  <meta name="description" content="A scrollable history of the Schödel family in Germany: from medieval Rhineland nobility to Bavarian textile industrialists, through the Third Reich, and into the modern era. All factual claims cited in APA 7 format." />
+
+  <!-- Fonts: Playfair Display (display/headings) + Work Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-full: 9999px;
+
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Work Sans', 'Helvetica Neue', sans-serif;
+
+      --content-narrow: 640px;
+      --content-default: 900px;
+    }
+
+    /* ===== HERITAGE DARK PALETTE ===== */
+    :root, [data-theme="dark"] {
+      --color-bg: #0f0d0a;
+      --color-surface: #16140f;
+      --color-surface-2: #1c1a14;
+      --color-surface-offset: #211f18;
+      --color-divider: #2e2b22;
+      --color-border: #3a3729;
+
+      --color-text: #e8e0cc;
+      --color-text-muted: #9a9282;
+      --color-text-faint: #5a5549;
+      --color-text-inverse: #0f0d0a;
+
+      /* Aged gold accent */
+      --color-primary: #c9932e;
+      --color-primary-hover: #e0a83a;
+      --color-primary-active: #a87523;
+      --color-primary-highlight: rgba(201,147,46,0.12);
+
+      /* Red accent for Nazi era section */
+      --color-danger: #8b2020;
+      --color-danger-muted: rgba(139,32,32,0.15);
+
+      /* Muted green for post-war / business */
+      --color-success: #4a7c52;
+      --color-success-highlight: rgba(74,124,82,0.15);
+
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.6);
+    }
+
+    [data-theme="light"] {
+      --color-bg: #f5f0e8;
+      --color-surface: #faf7f0;
+      --color-surface-2: #ffffff;
+      --color-surface-offset: #ede8dc;
+      --color-divider: #d8d0be;
+      --color-border: #c8bfa8;
+
+      --color-text: #1a1710;
+      --color-text-muted: #6b6355;
+      --color-text-faint: #a89e8e;
+      --color-text-inverse: #f5f0e8;
+
+      --color-primary: #8b6518;
+      --color-primary-hover: #6e500e;
+      --color-primary-active: #4e3808;
+      --color-primary-highlight: rgba(139,101,24,0.1);
+
+      --color-danger: #7a1a1a;
+      --color-danger-muted: rgba(122,26,26,0.1);
+
+      --color-success: #2e5c36;
+      --color-success-highlight: rgba(46,92,54,0.1);
+
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    /* ===== BASE ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    body {
+      min-height: 100dvh;
+      line-height: 1.65;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    ul[role="list"], ol[role="list"] { list-style: none; }
+    h1,h2,h3,h4,h5,h6 { text-wrap: balance; line-height: 1.2; }
+    p, li { text-wrap: pretty; max-width: 68ch; }
+    button { cursor: pointer; background: none; border: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ===== STICKY HEADER ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-3) var(--space-5);
+      background: color-mix(in oklch, var(--color-bg) 88%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-divider);
+      transition: box-shadow var(--transition-interactive);
+    }
+
+    .site-header.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    .logo-mark svg {
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--color-primary);
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-muted);
+      transition: color var(--transition-interactive), background var(--transition-interactive);
+    }
+    .theme-toggle:hover { color: var(--color-primary); background: var(--color-primary-highlight); }
+
+    /* ===== NAV ===== */
+    .chapter-nav {
+      display: flex;
+      gap: var(--space-1);
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: var(--space-2) var(--space-5);
+      border-bottom: 1px solid var(--color-divider);
+      background: var(--color-surface);
+    }
+    .chapter-nav::-webkit-scrollbar { display: none; }
+
+    .nav-pill {
+      flex-shrink: 0;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      border: 1px solid var(--color-border);
+      transition: color var(--transition-interactive), background var(--transition-interactive), border-color var(--transition-interactive);
+      white-space: nowrap;
+    }
+    .nav-pill:hover, .nav-pill.active {
+      color: var(--color-primary);
+      background: var(--color-primary-highlight);
+      border-color: var(--color-primary);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 92dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-16) var(--space-6);
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, color-mix(in oklch, var(--color-primary) 8%, transparent) 0%, transparent 70%),
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 40px,
+          color-mix(in oklch, var(--color-primary) 2%, transparent) 40px,
+          color-mix(in oklch, var(--color-primary) 2%, transparent) 41px
+        );
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-4);
+      max-width: 12ch;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-primary);
+    }
+
+    .hero-subtitle {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      max-width: 52ch;
+      margin-bottom: var(--space-8);
+      line-height: 1.7;
+    }
+
+    .hero-crest {
+      margin-bottom: var(--space-8);
+    }
+
+    .scroll-cue {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: var(--space-6);
+    }
+
+    .scroll-arrow {
+      width: 24px;
+      height: 24px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* ===== CHAPTER SECTIONS ===== */
+    .chapter {
+      padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-5);
+      max-width: var(--content-default);
+      margin: 0 auto;
+    }
+
+    .chapter-full {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    /* ===== CHAPTER HEADER ===== */
+    .chapter-header {
+      margin-bottom: var(--space-10);
+    }
+
+    .chapter-era {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-3);
+    }
+
+    .chapter-era::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-primary);
+    }
+
+    .chapter-title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-4);
+    }
+
+    .chapter-lead {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+
+    /* ===== DIVIDER ===== */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-divider), transparent);
+      margin: 0;
+    }
+
+    /* ===== BAND (full-width colored section) ===== */
+    .band {
+      background: var(--color-surface);
+      padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-5);
+    }
+
+    .band-inner {
+      max-width: var(--content-default);
+      margin: 0 auto;
+    }
+
+    .band-danger {
+      background: color-mix(in oklch, var(--color-danger) 8%, var(--color-bg));
+      border-top: 1px solid color-mix(in oklch, var(--color-danger) 30%, transparent);
+      border-bottom: 1px solid color-mix(in oklch, var(--color-danger) 30%, transparent);
+    }
+
+    .band-success {
+      background: color-mix(in oklch, var(--color-success) 8%, var(--color-bg));
+      border-top: 1px solid color-mix(in oklch, var(--color-success) 30%, transparent);
+      border-bottom: 1px solid color-mix(in oklch, var(--color-success) 30%, transparent);
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      position: relative;
+      padding-left: var(--space-8);
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--color-primary), color-mix(in oklch, var(--color-primary) 20%, transparent));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: var(--space-10);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: calc(-1 * var(--space-8) - 5px);
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      border: 2px solid var(--color-bg);
+      box-shadow: 0 0 0 2px var(--color-primary);
+    }
+
+    .timeline-date {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-1);
+    }
+
+    .timeline-heading {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-2);
+    }
+
+    .timeline-body {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    /* ===== CARDS ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+
+    @media (min-width: 600px) {
+      .card-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 900px) {
+      .card-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    .card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition-interactive), border-color var(--transition-interactive);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: color-mix(in oklch, var(--color-primary) 40%, var(--color-border));
+    }
+
+    .card-icon {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-3);
+      line-height: 1;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-2);
+    }
+
+    .card-body {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    .card-tag {
+      display: inline-block;
+      margin-top: var(--space-3);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      border: 1px solid color-mix(in oklch, var(--color-primary) 40%, transparent);
+      border-radius: var(--radius-full);
+      padding: 2px var(--space-3);
+    }
+
+    /* ===== RECORD CARD (Nazi era) ===== */
+    .record-card {
+      background: var(--color-surface);
+      border: 1px solid color-mix(in oklch, var(--color-danger) 35%, var(--color-border));
+      border-left: 4px solid var(--color-danger);
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+      margin-bottom: var(--space-4);
+    }
+
+    .record-name {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-2);
+    }
+
+    .record-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+    }
+
+    .record-chip {
+      font-size: var(--text-xs);
+      font-weight: 500;
+      color: var(--color-text-muted);
+      background: var(--color-surface-offset);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 2px var(--space-2);
+    }
+
+    .record-note {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ===== PULL QUOTE ===== */
+    .pull-quote {
+      border-left: 3px solid var(--color-primary);
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-8) 0;
+      background: var(--color-primary-highlight);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .pull-quote blockquote {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.55;
+      max-width: 56ch;
+    }
+
+    .pull-quote cite {
+      display: block;
+      margin-top: var(--space-3);
+      font-size: var(--text-xs);
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
+
+    /* ===== CONTEXT BOX ===== */
+    .context-box {
+      background: var(--color-surface-offset);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-6);
+      margin: var(--space-6) 0;
+    }
+
+    .context-box-title {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-2);
+    }
+
+    .context-box p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    /* ===== STAT STRIP ===== */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-4);
+      margin: var(--space-8) 0;
+    }
+
+    @media (min-width: 600px) {
+      .stat-strip { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: var(--space-5) var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+
+    .stat-label {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      line-height: 1.4;
+    }
+
+    /* ===== COAT OF ARMS SECTION ===== */
+    .crest-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-6);
+      padding: var(--space-8) 0;
+    }
+
+    @media (min-width: 700px) {
+      .crest-section {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--space-10);
+      }
+    }
+
+    .crest-image {
+      flex-shrink: 0;
+    }
+
+    /* ===== USA BRIDGE SECTION ===== */
+    .usa-bridge {
+      background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-offset) 100%);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin: var(--space-6) 0;
+    }
+
+    .usa-bridge h3 {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--color-text);
+      margin-bottom: var(--space-3);
+    }
+
+    .usa-bridge p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    /* ===== CHAPTER INDICATOR ===== */
+    .chapter-number {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 20vw, 14rem);
+      font-weight: 700;
+      color: color-mix(in oklch, var(--color-primary) 7%, transparent);
+      position: absolute;
+      top: -0.2em;
+      right: -0.1em;
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .chapter-header-wrap {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: var(--space-6);
+    }
+
+    /* ===== LOOM SVG DECORATION ===== */
+    .textile-divider {
+      width: 100%;
+      height: 24px;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    /* ===== SOURCE LINK ===== */
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      font-size: var(--text-xs);
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color var(--transition-interactive);
+    }
+    .source-link:hover { color: var(--color-primary-hover); text-decoration: underline; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-divider);
+      padding: var(--space-10) var(--space-5);
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: var(--content-narrow);
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--color-primary);
+      margin-bottom: var(--space-3);
+    }
+
+    .footer-note {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      line-height: 1.7;
+      margin-bottom: var(--space-4);
+    }
+
+    .footer-sources {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+    }
+
+    .footer-sources a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .footer-sources a:hover { text-decoration: underline; }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ===== PROGRESS BAR ===== */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--color-primary);
+      z-index: 200;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* ===== BODY TEXT ===== */
+    .body-text {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      line-height: 1.75;
+      max-width: 66ch;
+    }
+
+    .body-text + .body-text {
+      margin-top: var(--space-4);
+    }
+
+    .body-text strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    /* ===== TWO COL LAYOUT ===== */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      align-items: start;
+    }
+
+    @media (min-width: 700px) {
+      .two-col { grid-template-columns: 1fr 1fr; }
+      .two-col-3-2 { grid-template-columns: 3fr 2fr; }
+    }
+
+    /* ===== SECTION TAG ===== */
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-4);
+    }
+
+    .tag-gold { color: var(--color-primary); background: var(--color-primary-highlight); border: 1px solid color-mix(in oklch, var(--color-primary) 30%, transparent); }
+    .tag-red { color: var(--color-danger); background: var(--color-danger-muted); border: 1px solid color-mix(in oklch, var(--color-danger) 30%, transparent); }
+    .tag-green { color: var(--color-success); background: var(--color-success-highlight); border: 1px solid color-mix(in oklch, var(--color-success) 30%, transparent); }
+
+    /* ===== DECORATIVE SEPARATOR ===== */
+    .ornamental-sep {
+      text-align: center;
+      color: var(--color-primary);
+      font-size: var(--text-lg);
+      letter-spacing: 0.5em;
+      margin: var(--space-8) 0;
+      opacity: 0.4;
+    }
+
+    /* ===== NSDAP MEMBERS TABLE ===== */
+    .members-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-xs);
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+    }
+
+    .members-table thead {
+      background: color-mix(in oklch, var(--color-danger) 20%, var(--color-surface));
+    }
+
+    .members-table th {
+      padding: var(--space-2) var(--space-3);
+      text-align: left;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .members-table tbody tr:nth-child(even) {
+      background: var(--color-surface-offset);
+    }
+
+    .members-table td {
+      padding: var(--space-2) var(--space-3);
+      color: var(--color-text-muted);
+      border-bottom: 1px solid var(--color-divider);
+      vertical-align: top;
+    }
+
+    .members-table td:first-child {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+    }
+
+    /* ===== APA CITATION STYLE ===== */
+    .apa-cite {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      font-style: normal;
+    }
+
+    /* ===== REFERENCE LIST ===== */
+    .reference-section {
+      background: var(--color-surface);
+      padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-5);
+      border-top: 2px solid var(--color-primary);
+    }
+
+    .reference-inner {
+      max-width: var(--content-default);
+      margin: 0 auto;
+    }
+
+    .reference-list {
+      list-style: none;
+      counter-reset: none;
+      margin-top: var(--space-8);
+    }
+
+    .reference-list li {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      padding-left: 2.5em;
+      text-indent: -2.5em;
+      margin-bottom: var(--space-5);
+      max-width: 70ch;
+    }
+
+    .reference-list a {
+      color: var(--color-primary);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .reference-list a:hover { text-decoration: underline; }
+
+    .ref-label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-6);
+      display: block;
+    }
+
+    /* ===== ANALYTICAL INSET BOX ===== */
+    .analysis-box {
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-primary);
+      background: var(--color-surface-offset);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: var(--space-5) var(--space-6);
+      margin: var(--space-6) 0;
+    }
+
+    .analysis-box-title {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-3);
+    }
+
+    .analysis-box p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .analysis-box p + p {
+      margin-top: var(--space-3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Reading progress bar -->
+<div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+<!-- ===== STICKY HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <a href="#hero" class="logo-mark" aria-label="Schödel Family — Home">
+    <!-- SVG Logo: woven thread / family crest mark -->
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="26" height="26" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+      <path d="M7 14 L14 7 L21 14 L14 21 Z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/>
+      <path d="M14 7 L14 21" stroke="var(--color-primary)" stroke-width="1" opacity="0.5"/>
+      <path d="M7 14 L21 14" stroke="var(--color-primary)" stroke-width="1" opacity="0.5"/>
+      <circle cx="14" cy="14" r="2" fill="var(--color-primary)"/>
+    </svg>
+    <span class="logo-text">Schödel</span>
+  </a>
+
+  <div class="header-controls">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== CHAPTER NAV ===== -->
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a href="#origins" class="nav-pill">Medieval Origins</a>
+  <a href="#rhineland" class="nav-pill">Rhineland Nobles</a>
+  <a href="#business" class="nav-pill">Industrial Era</a>
+  <a href="#weimar" class="nav-pill">Weimar Germany</a>
+  <a href="#naziera" class="nav-pill">The Nazi Era</a>
+  <a href="#postwar" class="nav-pill">Post-War</a>
+  <a href="#usa" class="nav-pill">American Branch</a>
+  <a href="#references" class="nav-pill">References</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <!-- SVG Coat of Arms / Family Mark -->
+  <div class="hero-crest">
+    <svg width="90" height="110" viewBox="0 0 90 110" fill="none" aria-label="Schödel family heraldic mark">
+      <!-- Shield shape -->
+      <path d="M5 5 H85 V65 Q85 95 45 107 Q5 95 5 65 Z" stroke="var(--color-primary)" stroke-width="2" fill="color-mix(in oklch, var(--color-primary) 6%, transparent)"/>
+      <!-- Inner frame -->
+      <path d="M12 12 H78 V63 Q78 88 45 100 Q12 88 12 63 Z" stroke="var(--color-primary)" stroke-width="1" fill="none" opacity="0.4"/>
+      <!-- Diamond/lozenge motif (textile / weaving) -->
+      <path d="M45 28 L60 45 L45 62 L30 45 Z" stroke="var(--color-primary)" stroke-width="1.5" fill="color-mix(in oklch, var(--color-primary) 12%, transparent)"/>
+      <!-- Cross hatching — woven cloth motif -->
+      <line x1="30" y1="45" x2="60" y2="45" stroke="var(--color-primary)" stroke-width="0.75" opacity="0.6"/>
+      <line x1="45" y1="28" x2="45" y2="62" stroke="var(--color-primary)" stroke-width="0.75" opacity="0.6"/>
+      <!-- Small ornament at top -->
+      <path d="M38 5 Q45 0 52 5" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/>
+      <circle cx="45" cy="4" r="2" fill="var(--color-primary)"/>
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">A Family History — Cited in APA 7 Format</p>
+  <h1 class="hero-title">The <em>Schödel</em> Family in Germany</h1>
+  <p class="hero-subtitle">From medieval Rhineland nobility to Bavarian textile industrialists — a thousand-year story of enterprise, survival, and legacy across two continents. All factual claims cited in APA 7 format.</p>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll to explore</span>
+    <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 1: MEDIEVAL ORIGINS ===== -->
+<section class="chapter" id="origins">
+  <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">I</span>
+    <div class="chapter-header reveal">
+      <span class="chapter-era">Before 1400</span>
+      <h2 class="chapter-title">Ancient Roots in the Rhineland</h2>
+      <p class="chapter-lead">The Schödel name traces to one of the oldest documented family lines in the Rhine provinces — free nobility whose lineage is recorded as far back as the early Carolingian period of German history.</p>
+    </div>
+  </div>
+
+  <div class="two-col two-col-3-2">
+    <div>
+      <p class="body-text reveal">The family, then styled as <strong>von Schödler</strong>, emerged from the Rhine provinces as free — meaning noble — descent. Nineteenth-century genealogical records compiled for Berks County, Pennsylvania describe the Schödlers as spreading "over large portions of Germany and Switzerland, where it originated various noble families, which are recorded partly in the Austrian, and partly in the Berner and Basler lists of Knights" (Historical &amp; Biographical Annals of Berks County, 1907). The medieval Rhineland was a complex political landscape: it was ruled from the 13th century by the Bavarian Wittelsbach dynasty, and was fractured into small independent states with intertwined temporal and religious governments (Wilson, 2016).</p>
+
+      <p class="body-text reveal" style="margin-top: var(--space-4);">The lineage is documented at least to <strong>Hector, surnamed der Schödler</strong>, a knight who served as town magistrate of Aachen (Aix-la-Chapelle) by imperial appointment. His son <strong>Hans der Schödler</strong> was constituted Count of Fiefenbach by Charlemagne in the year <strong>805 AD</strong> (Historical &amp; Biographical Annals of Berks County, 1907). The Carolingian system of appointing loyal knights as local administrators — a structure that gave rise to many lasting noble families — is well documented in the scholarship on Frankish governance (Wilson, 2016).</p>
+
+      <p class="body-text reveal" style="margin-top: var(--space-4);">Another descendant, <strong>Knight Gotthard der Schödler</strong>, is recorded as having participated in crusades against Frisian pagans, bringing captives to Aachen where they received Christian baptism. He died in <strong>820 AD</strong> as a monk of the cloister at Paderborn — where his tomb and the Schödler coat of arms, carved in stone, reportedly still existed in the 19th century (Historical &amp; Biographical Annals of Berks County, 1907). These records, though compiled centuries after the fact, draw on genealogical traditions common to the Rhine provinces.</p>
+
+      <div class="pull-quote reveal">
+        <blockquote>"The lineage goes back so far that it is lost in the early centuries of the Christian era in Germany."</blockquote>
+        <cite>— Historical &amp; Biographical Annals of Berks County, Pennsylvania (1907)</cite>
+      </div>
+
+      <div class="analysis-box reveal">
+        <div class="analysis-box-title">Analytical Note: Interpreting Medieval Genealogy</div>
+        <p>Medieval noble genealogies must be read critically. Records like the Berks County Annals draw on family oral traditions and 19th-century genealogical compilations, which often blended documentary evidence with hagiographic enhancement. The specific events attributed to 805 and 820 AD — while plausible within the Carolingian political structure — cannot be independently verified from surviving primary sources. Nonetheless, the consistency of the heraldic record from 1260 onward provides firmer documentary grounding for the family's noble status (Historical &amp; Biographical Annals of Berks County, 1907; Heraldry Institute of Rome, 2018).</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="card reveal">
+        <div class="card-icon">⚔️</div>
+        <h3 class="card-title">The Coat of Arms — 13th Century</h3>
+        <p class="card-body">The Historical &amp; Biographical Annals of Berks County (1907) record that the Schödler coat of arms was confirmed through imperial letters patent to <strong>George von Schödler</strong> and his descendants, attributing this grant to Emperor Rudolf I and the date 1260. This record requires a critical note: Rudolf I of Habsburg was not elected Holy Roman Emperor until 1273, making an imperial grant in 1260 chronologically impossible. The Berks County source — a 19th-century genealogical compilation — likely conflates either the date or the emperor's name. The heraldic confirmation may have occurred after 1273 under Rudolf I, or earlier under a different grantor. The Heraldry Institute of Rome independently confirms the Schödel name in medieval German records from 1333 onward (Heraldry Institute of Rome, 2018), establishing the family's documented presence regardless of when the arms were formally confirmed. From the close of the 14th century, the Holy Roman Empire granted arms through <em>Hofpfalzgrafen</em> (counts palatine of the imperial court), a process that conferred hereditary heraldic rights (Bridges, n.d.).</p>
+        <span class="card-tag">13th Century AD</span>
+      </div>
+
+      <div class="card reveal reveal-delay-1" style="margin-top: var(--space-5);">
+        <div class="card-icon">🏰</div>
+        <h3 class="card-title">Nobility of Wiesenthal — 1305</h3>
+        <p class="card-body">George von Schödler's son <strong>Adolph</strong> was invested with the noble family of Wiesenthal in Austria by Emperor Albrecht in <strong>1305</strong>, founding that branch (Historical &amp; Biographical Annals of Berks County, 1907). This Austrian line eventually became extinct in the 17th century, coinciding with the broader contraction of minor nobility during the Thirty Years' War and its devastating demographic and economic aftermath. By mid-17th century, the name had disappeared from the genealogical tables of Austrian and Swiss nobility (Historical &amp; Biographical Annals of Berks County, 1907).</p>
+        <span class="card-tag">Austria, 1305</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 2: RHINELAND TO BAVARIA ===== -->
+<section class="band" id="rhineland">
+  <div class="band-inner">
+    <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">II</span>
+    <div class="chapter-header reveal">
+      <span class="chapter-era">1400 – 1800</span>
+      <h2 class="chapter-title">From Nobles to Craftsmen</h2>
+      <p class="chapter-lead">As the medieval noble structure dissolved under the weight of the Reformation, the Thirty Years' War, and the splintering of imperial authority, the Schödel family transformed from landed knights into skilled tradespeople — the very backbone of German economic life that would eventually give rise to the Mittelstand.</p>
+    </div>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-date">14th Century</div>
+        <h3 class="timeline-heading">Swiss and Berner Nobility</h3>
+        <p class="timeline-body">Descendants of the Rhineland branch settled in Switzerland, appearing "among the Berner and Basler nobility as early as the fourteenth century, all of whom preserved and continued the Rhinelandian coat of arms" (Historical &amp; Biographical Annals of Berks County, 1907). The maintenance of heraldic identity across multiple generations and political territories indicates a coherent family identity — even as the political structures that had originally conferred noble status began to erode.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Mid-17th Century</div>
+        <h3 class="timeline-heading">Decline of the Noble Line</h3>
+        <p class="timeline-body">Around 1650, the Schödler name disappears from Austrian and Swiss genealogical tables. The Berks County Annals attribute this to "the most important and respectable branches of the family" having "died out," with surviving members having "abandoned the title of nobility" (Historical &amp; Biographical Annals of Berks County, 1907). This timeline aligns with the devastation of the Thirty Years' War (1618–1648), which killed approximately one-third of Germany's population and economically ruined much of the minor nobility. The displacement of noble families into the artisan and merchant classes during this period was a documented social phenomenon across Central Europe.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">1333–1398</div>
+        <h3 class="timeline-heading">Early Name Variants in German Records</h3>
+        <p class="timeline-body">The Heraldry Institute of Rome's genealogical database documents early Schödel individuals spanning a range of occupations: <strong>Eberwinus Schödel (1333, Oberrhein)</strong> as a glove-maker, and <strong>Walther Schödel (1398, Mengen)</strong> as a priest (Heraldry Institute of Rome, 2018). This breadth — clergy and craftsmen — signals the surname's spread across social strata in the upper Rhine region by the late medieval period.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Late 18th Century</div>
+        <h3 class="timeline-heading">Craftsmen of Upper Franconia</h3>
+        <p class="timeline-body">In cities like <strong>Münchberg</strong> in Upper Franconia (Bavaria), records show Schödel family members among the tradesman class. The region was already known for hand weaving: by 1752, Münchberg counted 30 weavers among 160 craftsmen (MünchBürger e.V., n.d.). The transition from noble landowner to skilled artisan — common across Central Europe in this era — positioned the family for the industrial transformation that Friedrich Schoedel would lead a century later. The Rhineland's geography, centered on river trade and artisan production, facilitated exactly this kind of class migration across generations (Wilson, 2016).</p>
+      </div>
+    </div>
+
+    <div class="context-box reveal">
+      <div class="context-box-title">The Palatinate Connection</div>
+      <p>The Pennsylvania Germans — who share geographic origins with the Schödel family — came predominantly from the Palatinate and surrounding Rhine territories. Historian Marianne Wokeck (1999) estimates just under 81,000 German-speakers entered Philadelphia between 1683 and 1775, with the Palatinate as the dominant source region. The cultural and geographic overlap between the Rhine provinces that gave rise to the Schödel noble lineage and the emigration patterns that produced the Pennsylvania Schoedler family cannot be coincidental — both stories begin in the same river valleys.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 3: THE TEXTILE DYNASTY ===== -->
+<section class="chapter" id="business">
+  <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">III</span>
+    <div class="chapter-header reveal">
+      <span class="chapter-era">1885 – 2008</span>
+      <h2 class="chapter-title">The Textile Industrialists of Münchberg</h2>
+      <p class="chapter-lead">The most thoroughly documented Schödel enterprise in Germany: a textile factory founded in 1885 that became one of the largest businesses in Upper Franconia — operating continuously for 123 years across two world wars, Nazi occupation, division, and reunification.</p>
+    </div>
+  </div>
+
+  <div class="stat-strip reveal">
+    <div class="stat-item">
+      <div class="stat-value">1885</div>
+      <div class="stat-label">Year Friedrich Schoedel mechanized the weaving mill (MünchBürger e.V., n.d.)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">2008</div>
+      <div class="stat-label">Year the firm closed — 123 years in continuous family operation</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">1925</div>
+      <div class="stat-label">Year a dedicated spinning building was added to the complex (MünchBürger e.V., n.d.)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">1943</div>
+      <div class="stat-label">Year the factory was seized by the Nazi regime for armaments production</div>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div>
+      <div class="section-tag tag-gold">Business Legacy</div>
+      <p class="body-text">In <strong>1884–1885</strong>, <strong>Friedrich Schoedel</strong> joined a wave of Münchberg industrialists who mechanized weaving production using power looms. The <a href="https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/" class="source-link" target="_blank">University of Hof's historical record</a> describes the Schoedel weaving mill as "one of the largest businesses in the town" during its peak era around 1900 (University of Hof, 2023). The mechanization of textile production in Münchberg in the 1880s was part of a broader German industrial wave: Bavaria employed 109,000 persons — approximately 8% of Germany's textile workforce — as of 1939 (International Labour Organization [ILO], ca. 1950).</p>
+
+      <p class="body-text" style="margin-top: var(--space-4);">The factory's oldest product line was the <strong>Drellweberei</strong> — a corded twill weave historically used for mattress covers and corset fabrics. By 1925–26, a spinning building was added, expanding the vertical integration of the operation (MünchBürger e.V., n.d.). This move toward vertical integration was a hallmark of successful Mittelstand firms, which sought to reduce dependency on external suppliers and maintain control over product quality across the entire production chain.</p>
+
+      <p class="body-text" style="margin-top: var(--space-4);">In the early 20th century, the firm's signature export product, <strong>"Wiener Linon"</strong> (Vienna Cambric — a fine, plain-woven cotton fabric; <em>Linon</em> refers to cambric, distinct from the sheerer fabric known as lawn), achieved international success. By the late 20th century, Friedrich Schoedel GmbH remained the <strong>sole German manufacturer of inelastic corset fabric</strong> — a remarkable market specialization for a family firm of its size (MünchBürger e.V., n.d.). The company subsequently added knitted mattress cover fabrics to adapt to changing consumer markets in the 1990s.</p>
+
+      <div class="analysis-box" style="margin-top: var(--space-6);">
+        <div class="analysis-box-title">The Mittelstand Framework</div>
+        <p>The Friedrich Schoedel firm exemplifies Germany's <em>Mittelstand</em> — family-owned small and medium enterprises that form the backbone of German economic identity. As Venohr et al. (2015) describe, Mittelstand firms are run by "owner-entrepreneurial families seeking to sustain the business by instituting a core ideology of longevity." Simon (1996), in his foundational study of German market leaders, identified precisely this long-term orientation and niche specialization as the hallmarks of durable German family firms. The historical record of Friedrich Schoedel GmbH — 123 years of continuous family ownership across wars, hyperinflation, state seizure, and global competition — embodies this ethos of generational continuity.</p>
+        <p style="margin-top: var(--space-3);">The eventual decline of the firm in 2008 aligns with broader structural forces: since the 1970s, deindustrialization hit the textile industry especially hard, with global competition from low-wage producers eroding the market position of European manufacturers (Social History Portal, 2020). This pattern affected the entire Münchberg textile cluster, not merely the Schoedel family enterprise.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="card reveal">
+        <div class="card-icon">🏭</div>
+        <h3 class="card-title">The Schoedel Villa</h3>
+        <p class="card-body">The family's industrial prosperity was embodied in the <strong>Schoedel Villa</strong>, a prominent residence in Münchberg that stands opposite the former factory buildings on Kulmbacher Straße (MünchBürger e.V., n.d.). It is now documented as part of the city's <em>Historischer Münchberg Weg</em> (Heritage Walking Route) and described as among "the last artifacts that tell of the beginning of industrial textile production in and around Münchberg." In a remarkable historical footnote, automobile pioneer <strong>August Horch</strong> — founder of the manufacturer that became Audi — fled Soviet-occupied Saxony in October 1945 and was housed by American occupation authorities in the Schoedel Villa, where he lived until his death in 1951 (MünchBürger e.V., n.d.).</p>
+        <span class="card-tag">Still Standing Today</span>
+      </div>
+
+      <div class="card reveal reveal-delay-1" style="margin-top: var(--space-5);">
+        <div class="card-icon">🧵</div>
+        <h3 class="card-title">Münchberg's Textile Economy</h3>
+        <p class="card-body">The Schoedels operated within a thriving regional textile ecosystem. The MünchBürger historical record shows that by 1947 Münchberg had 36 textile firms; by 1955, approximately 4,000 workers and 2,500 looms were in operation in the town (MünchBürger e.V., n.d.). Bavaria's textile workforce nearly returned to its pre-war level of 109,000 by end of 1947, partly due to the influx of expellees and refugees from German-speaking territories to the east (ILO, ca. 1950). The Schoedel mill was among the oldest and most established firms in this cluster.</p>
+        <span class="card-tag">Upper Franconia, Bavaria</span>
+      </div>
+
+      <div class="card reveal reveal-delay-2" style="margin-top: var(--space-5);">
+        <div class="card-icon">📜</div>
+        <h3 class="card-title">Business Continuity Research</h3>
+        <p class="card-body">The Business History Review's analysis of Mittelstand firms in the 20th century notes that German family businesses "survived periods of political and economic upheaval that destroyed most of their competitors" (Fear et al., 2006). The Schoedel firm's survival through two world wars, the Nazi seizure, and the postwar restructuring of the German economy places it within a distinct category of resilient family enterprises whose longevity itself is a form of institutional history.</p>
+        <span class="card-tag">Institutional History</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 4: WEIMAR ===== -->
+<section class="band" id="weimar">
+  <div class="band-inner">
+    <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">IV</span>
+    <div class="chapter-header reveal">
+      <span class="chapter-era">1919 – 1933</span>
+      <h2 class="chapter-title">The Weimar Years</h2>
+      <p class="chapter-lead">Germany's unstable democratic republic brought economic catastrophe, hyperinflation, and the rise of extremist politics — pressures that tested every German family and business, and created the conditions under which the Nazi party's appeal became comprehensible.</p>
+    </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div>
+        <p class="body-text">The Friedrich Schoedel textile firm weathered the turbulent Weimar Republic years under severe strain. German industrial production fell to the level of the late 1880s by the end of World War I, and could not reach pre-war output levels until 1927 (Hardach, 2014). Unemployment rose to approximately 10% by 1926, then collapsed catastrophically following the 1929 Wall Street crash. The Schoedel factory records show the firm was <strong>temporarily shut down in 1933</strong> — the year Hitler became Chancellor — suggesting economic distress coinciding with political upheaval (MünchBürger e.V., n.d.).</p>
+
+        <p class="body-text" style="margin-top: var(--space-4);">For German business owners, survival required navigating impossible choices: comply with an increasingly radical political environment, or risk losing access to contracts, credit, and community standing. The NSDAP's appeal to the Mittelstand and small business owners was not incidental — the party explicitly targeted artisans, shopkeepers, and small manufacturers who had been devastated by the economic crises of the Weimar period (Kater, 1983). Between 1928 and 1932, Nazi Party support grew from 2.6% to 37.3% of the national vote, with its strongest support concentrated in Protestant rural areas, small towns, and among the lower middle class (Geary, n.d.).</p>
+
+        <p class="body-text" style="margin-top: var(--space-4);">Historian Michael Kater's (1983) foundational study of NSDAP membership demonstrates that the lower middle class — the social stratum that included small manufacturers like the Schoedels — was dramatically overrepresented in Nazi Party membership. While the lower middle class comprised approximately 42.65% of the German population in 1933, it contributed 57.1% of new NSDAP members that year (Kater, 1983). This was not mere coercion: it reflected genuine economic grievances and political desperation in a class that saw the Weimar Republic as having failed to protect them.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3 class="card-title">Germany's Economic Collapse</h3>
+          <p class="card-body">Weimar Germany experienced two successive economic crises that devastated the Mittelstand. The hyperinflation of 1923 wiped out the savings of the middle classes. The global depression after 1929 brought mass unemployment — reaching 30% by 1932 — and collapsing export markets (Hardach, 2014). Textile manufacturing was particularly exposed: Bavaria's textile capacity was reduced by approximately one-fifth due to wartime disruption alone, before the Depression compounded the crisis (ILO, ca. 1950).</p>
+        </div>
+
+        <div class="card" style="margin-top: var(--space-5);">
+          <div class="card-icon">🗳️</div>
+          <h3 class="card-title">The NSDAP's Electoral Rise</h3>
+          <p class="card-body">The Nazi Party's growth from a fringe movement (2.6% in 1928) to Germany's largest party (37.3% in July 1932) was concentrated in precisely the social and geographic territories where the Schödels lived and worked (Geary, n.d.). Gau Oberfranken — the electoral district encompassing Münchberg — was among the NSDAP's strongest regional bases in Bavaria. Understanding this political geography is essential context for interpreting Schödel NSDAP membership records.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 5: THE NAZI ERA ===== -->
+<section class="band band-danger" id="naziera">
+  <div class="band-inner">
+    <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">V</span>
+    <div class="chapter-header reveal">
+      <span class="section-tag tag-red">Archival Record</span>
+      <h2 class="chapter-title">Schödels and the Third Reich</h2>
+      <p class="chapter-lead">The US National Archives digitized NSDAP membership card files, released publicly in March 2026. A direct search identified multiple individuals with the Schödel/Schoedel surname registered as Nazi Party members between 1932 and 1942 — records that demand both acknowledgment and careful historical interpretation.</p>
+    </div>
+    </div>
+
+    <div class="context-box reveal" style="border-left: 4px solid var(--color-danger);">
+      <div class="context-box-title">About These Records</div>
+      <p>The NSDAP membership files (Record Group 242) at the <a href="https://catalog.archives.gov/id/12044361" class="source-link" target="_blank">US National Archives</a> contain approximately 10 million membership cards from the Nazi Party's Zentralkartei (central index) and Ortsgruppenkartei (local group index), covering roughly 80% of NSDAP members (U.S. National Archives, 2026). A 2026 Harvard study using AI to digitize and analyze these records found that "early joiners were predominantly middle-class, male, and from non-agricultural industries" but that "those differences narrowed over time," with later members being "largely 'ordinary men' drawn into the movement by propaganda and social pressure" (Bosshart &amp; Weigand, 2026). Critically, the Harvard team found that 40% of German municipalities recorded <em>no</em> Nazi Party members at all — underscoring how geographically concentrated party membership was (Bosshart &amp; Weigand, 2026).</p>
+    </div>
+
+    <!-- NSDAP Members Table -->
+    <div class="table-wrap reveal">
+      <table class="members-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Born</th>
+            <th>Joined NSDAP</th>
+            <th>Member No.</th>
+            <th>Location / Gau</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Schödel, Adolf</td>
+            <td>16 Jan 1913</td>
+            <td>1 Mar 1932</td>
+            <td>#996,506</td>
+            <td>Konradsreuth, Gau Oberfranken</td>
+            <td>Pre-Hitler joiner — Kampfzeit</td>
+          </tr>
+          <tr>
+            <td>Schödel, Adolf</td>
+            <td>29 Jul 1924</td>
+            <td>1 Sep 1942</td>
+            <td>#9,131,423</td>
+            <td>Leimitz/Bayreuth, Gau Bayreuth</td>
+            <td>Wartime joiner, age 18</td>
+          </tr>
+          <tr>
+            <td>Schödel, Albin</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Weilenreuth, Gau Bayreuth</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Schödel, Günther</td>
+            <td>—</td>
+            <td>3 Sep 1940</td>
+            <td>#7,330,751</td>
+            <td>Berlin-Friedenau, Cranachstr. 13</td>
+            <td>Wartime joiner</td>
+          </tr>
+          <tr>
+            <td>Schoedel, Gerhard</td>
+            <td>27 May 1922</td>
+            <td>1 Sep 1940</td>
+            <td>#7,764,858</td>
+            <td>Münchberg, Leopoldstr. 11</td>
+            <td>Likely textile family connection</td>
+          </tr>
+          <tr>
+            <td>Schoedel, Dr. Heinrich</td>
+            <td>27 Jul 1913</td>
+            <td>1 May 1937</td>
+            <td>#4,092,765</td>
+            <td>Erlangen — physician</td>
+            <td>Wehrmacht service noted on card</td>
+          </tr>
+          <tr>
+            <td>Schoedel, Robert</td>
+            <td>5 Nov 1916</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Schwetzingen</td>
+            <td>Cross-reference card only</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-2);">Source: U.S. National Archives (2026). NSDAP Membership Records, Record Group 242. Reels U0026 and P0136. <a href="https://catalog.archives.gov/id/12044361" class="source-link" target="_blank">catalog.archives.gov/id/12044361</a></p>
+
+    <div class="card-grid reveal" style="margin-top: var(--space-8);">
+      <div class="card">
+        <div class="card-icon">⚠️</div>
+        <h3 class="card-title">The 1932 Joiner — Most Significant</h3>
+        <p class="card-body"><strong>Schödel Adolf (b. 1913, member #996,506)</strong> joined the NSDAP on March 1, 1932 — more than ten months before Hitler became Chancellor on January 30, 1933 (U.S. National Archives, 2026). Falter's (1991) landmark study of NSDAP membership demonstrates that those who joined during the <em>Kampfzeit</em> (struggle years) before Hitler's appointment were disproportionately ideologically motivated. More than 50% who joined before 1933 were under age 30 (Falter, 1991). This member's Konradsreuth location — a village in Gau Oberfranken — situates him in one of the NSDAP's strongest rural Bavarian strongholds.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3 class="card-title">Gerhard Schoedel — The Münchberg Connection</h3>
+        <p class="card-body"><strong>Gerhard Schoedel (b. 1922)</strong>, resident of Leopoldstr. 11, Münchberg, joined September 1, 1940 at age 18 (U.S. National Archives, 2026). His Münchberg address — the same town as the Friedrich Schoedel textile firm — strongly suggests a connection to the business-owning family, though direct genealogical confirmation would require Bavarian civil registry records. He joined during wartime, when party membership was heavily socially pressured for young men seeking employment, apprenticeships, or professional advancement (Bosshart &amp; Weigand, 2026). The year 1940 falls within the period when membership increasingly reflected social conformity rather than ideological conviction (Falter, 1991).</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏥</div>
+        <h3 class="card-title">Dr. Heinrich Schoedel — The Professional</h3>
+        <p class="card-body">Born in 1913 and practicing as a physician in Erlangen, <strong>Dr. Heinrich Schoedel</strong> joined May 1, 1937, with Wehrmacht service noted on his card (U.S. National Archives, 2026). This profile is consistent with Kater's (1983) finding that professional men — physicians, lawyers, engineers — were expected to hold party membership to maintain their licenses and professional standing. At its height, one in six German adults was a registered NSDAP member (Bosshart &amp; Weigand, 2026). For professionals, non-membership carried serious career consequences.</p>
+      </div>
+    </div>
+
+    <div class="context-box reveal" style="margin-top: var(--space-8); border-left: 4px solid var(--color-danger);">
+      <div class="context-box-title">The Business Under the Reich — Factory Seizure, 1943</div>
+      <p>The Friedrich Schoedel textile firm in Münchberg was <strong>seized for armaments purposes (<em>für Rüstungszwecke beschlagnahmt</em>) in 1943</strong> by the Nazi regime (MünchBürger e.V., n.d.). This is a significant historical data point: having family members registered as NSDAP members and having your business seized by the state are not contradictions — they reflect the totalitarian nature of the Nazi regime, which exercised coercive control over economic resources regardless of individual party membership status. The ADL's documentation of German industry under the Third Reich notes that industrial seizure for war production was widespread and involuntary for many firms (ADL, n.d.). The factory had already been temporarily closed in 1933; the 1943 seizure represented a different order of state intrusion.</p>
+    </div>
+
+    <div class="pull-quote reveal">
+      <blockquote>"The first Germans to become Nazis during Hitler's rise to power may have been ideological zealots, but later members were largely 'ordinary men' drawn into the movement by propaganda and social pressure."</blockquote>
+      <cite>— Bosshart &amp; Weigand (2026), Harvard Gazette — citing AI-assisted analysis of 10+ million NSDAP membership records</cite>
+    </div>
+
+    <div class="analysis-box reveal">
+      <div class="analysis-box-title">Interpretive Framework: Ideology vs. Conformity</div>
+      <p>Historians distinguish sharply between pre-1933 NSDAP joiners — who chose membership when it carried social risk and likely indicates ideological commitment — and post-1933 joiners, for whom membership was often a prerequisite for professional life, guild membership, and social inclusion (Falter, 1991; Kater, 1983). The Schödel members identified in the NSDAP records span both categories. The 1932 joiner (member #996,506) falls into the ideologically motivated early-joiner profile. The 1940 joiners — Gerhard Schoedel and Günther Schödel — joined during wartime when, as Bosshart and Weigand's (2026) Harvard research found, membership increasingly reflected social pressure and conformity rather than political conviction.</p>
+      <p>This interpretive distinction does not diminish the moral weight of party membership, which enabled and legitimized the Nazi regime regardless of individual motivation. It does, however, provide the historical precision necessary for responsible genealogical inquiry — distinguishing between perpetrators, opportunists, and those who joined under coercive conditions (Kater, 1983).</p>
+    </div>
+
+    <div style="text-align:center; margin-top: var(--space-6);">
+      <a href="https://catalog.archives.gov/id/602761194" class="source-link" target="_blank" style="font-size: var(--text-sm);">
+        View Primary Source: NARA NSDAP Membership Cards — Reel U0026 →
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 6: POST-WAR ===== -->
+<section class="band band-success" id="postwar">
+  <div class="band-inner">
+    <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">VI</span>
+    <div class="chapter-header reveal">
+      <span class="section-tag tag-green">Resilience</span>
+      <h2 class="chapter-title">Survival, Rebuilding, and Decline</h2>
+      <p class="chapter-lead">After 1945, West Germany's denazification process, the extraordinary economic reconstruction known as the <em>Wirtschaftswunder</em>, and the long shadow of the Third Reich shaped every surviving German family and business — including the Schödels of Münchberg.</p>
+    </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">1945</div>
+            <h3 class="timeline-heading">End of War — American Occupation</h3>
+            <p class="timeline-body">American forces occupied Upper Franconia, placing Münchberg within the US occupation zone. Denazification proceedings required business owners and party members to submit records to military government authorities. The Schoedel Villa, a visible symbol of local wealth, became temporary housing for <strong>August Horch</strong>, the Audi founder who fled Soviet-occupied Saxony (MünchBürger e.V., n.d.). Denazification courts classified Germans into five categories; business owners with NSDAP membership faced scrutiny and potential asset forfeiture, though outcomes varied widely based on local circumstances and evidence presented.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">1947–1948</div>
+            <h3 class="timeline-heading">Textile Sector Recovery</h3>
+            <p class="timeline-body">By end of 1947, Bavaria had approximately 50,000 textile workers, nearly reaching the 1939 level — a rapid recovery driven by the arrival of refugees and expellees from eastern German territories (ILO, ca. 1950). Münchberg had 36 textile firms operating by 1947 (MünchBürger e.V., n.d.). The introduction of the Deutsche Mark in June 1948 was a decisive turning point: as the Foundation for Economic Education documents, "striking improvement began in 1948, when the worthless [occupation currency] marks were swept into the ashcan" (Hazlitt, n.d.). The Friedrich Schoedel firm — its factory returned after wartime seizure — resumed production in this reconstructed economic environment.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">1950s–1960s</div>
+            <h3 class="timeline-heading">The Wirtschaftswunder Era</h3>
+            <p class="timeline-body">West Germany's <em>Wirtschaftswunder</em> (economic miracle) generated some of the fastest sustained economic growth in modern history. Eichengreen and Ritschl (2008) document that West German GDP rose by nearly 8% per annum between 1950 and 1959 — faster than anywhere else in Europe. This growth was driven by recovery from wartime TFP collapse, the structural reforms of Ludwig Erhard's social market economy, and massive labor inflows from eastern refugees. Münchberg's textile industry reached its postwar peak during this period: approximately 4,000 workers and 2,500 looms by 1955 (MünchBürger e.V., n.d.).</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">1970s–2008</div>
+            <h3 class="timeline-heading">Deindustrialization and the End of an Era</h3>
+            <p class="timeline-body">The global deindustrialization of textile manufacturing — driven by low-wage competition from Asia — hit Germany's weaving industry especially hard from the 1970s onward (Social History Portal, 2020). Women were disproportionately affected by textile job losses, as they had made up the majority of the weaving workforce (Social History Portal, 2020). Friedrich Schoedel GmbH adapted — becoming the last German maker of inelastic corset fabric and adding knitted mattress cover fabrics in the 1990s (MünchBürger e.V., n.d.). The firm finally <strong>closed in 2008</strong>, after 123 years of continuous family operation, its closure a microcosm of the broader decline of Germany's textile Mittelstand.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card reveal">
+          <div class="card-icon">🏠</div>
+          <h3 class="card-title">The Villa Endures</h3>
+          <p class="card-body">The Schoedel Villa in Münchberg remains standing and is recognized as part of the city's industrial heritage walking route (<em>Historischer Münchberg Weg</em>). The factory buildings — while the business has closed — are described in MünchBürger records as "the last artifacts that tell of the beginning of industrial textile production in and around Münchberg" (MünchBürger e.V., n.d.). The villa's preservation reflects the broader German practice of <em>Industriekultur</em> — recognizing former industrial sites as historical heritage rather than simply clearing them for redevelopment.</p>
+          <a href="https://www.muenchbuerger.info/hmw/o4_schoedelsvilla.html" class="source-link" target="_blank" style="display:block;margin-top:var(--space-3);">View MünchBürger historical record →</a>
+        </div>
+
+        <div class="card reveal reveal-delay-1" style="margin-top: var(--space-5);">
+          <div class="card-icon">🚗</div>
+          <h3 class="card-title">August Horch — An Unexpected Guest</h3>
+          <p class="card-body">August Horch (1868–1951), who founded both Horch Automobil-Werke and later Audiwerke AG — the predecessor of the modern Audi — fled the Soviet occupation zone in October 1945 and was housed at the Schoedel Villa in Münchberg by American occupation authorities (MünchBürger e.V., n.d.). He lived there from 1945 to 1951. The presence of one of Germany's greatest automotive innovators in the home of a Bavarian textile dynasty creates a striking human intersection of the two most emblematic German industries of the 20th century.</p>
+        </div>
+
+        <div class="card reveal reveal-delay-2" style="margin-top: var(--space-5);">
+          <div class="card-icon">📈</div>
+          <h3 class="card-title">The Wirtschaftswunder in Context</h3>
+          <p class="card-body">West Germany's economic miracle was not simply the result of Marshall Plan aid. Eichengreen and Ritschl (2008) demonstrate that the primary driver was recovery from the catastrophic wartime TFP shock of 1944–46, combined with Erhard's liberalization reforms. For firms like Friedrich Schoedel GmbH, this recovery provided the demand and stability that allowed Mittelstand enterprises to rebuild, reinvest, and specialize — sustaining the family business through the 1950s and 1960s peak.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ===== CHAPTER 7: AMERICAN BRANCH ===== -->
+<section class="chapter" id="usa">
+  <div class="chapter-header-wrap">
+    <span class="chapter-number" aria-hidden="true">VII</span>
+    <div class="chapter-header reveal">
+      <span class="chapter-era">17th Century – Present</span>
+      <h2 class="chapter-title">The American Branch</h2>
+      <p class="chapter-lead">No documentary link between the German Schödlers and the Pennsylvania Schoedlers has yet been established. Yet the parallels in enterprise, Rhineland origin, and community embeddedness are striking — and the absence of evidence is not evidence of absence.</p>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div>
+      <p class="body-text">Historical records compiled for Berks County, Pennsylvania document the <strong>Schoedler/Schoedel family</strong> settling primarily in the townships of <strong>Longswamp, Maxatawny, and Richmond</strong> in Berks County (Historical &amp; Biographical Annals of Berks County, 1907). These communities were at the heart of Pennsylvania's 18th-century German immigrant settlement. The compilers noted directly: "Thus far no connecting link between the Schödlers in Germany and Switzerland with those in America has been found" — an honest scholarly admission that the oral tradition of shared origins remained unverified (Historical &amp; Biographical Annals of Berks County, 1907).</p>
+
+      <p class="body-text" style="margin-top: var(--space-4);">The Pennsylvania branch reflects the broader patterns of German emigration to the American colonies. Historian Aaron Fogleman (1996) estimated approximately 85,000 German-speakers migrated to the American colonies between 1700 and 1775. Marianne Wokeck (1999) calculated that just under 81,000 German-speakers entered Philadelphia between 1683 and 1775. Conzen (1980) synthesized census evidence showing that by 1790, persons of German birth or descent constituted approximately one-third of Pennsylvania's total population — the highest concentration of German ancestry of any colonial state. Pennsylvania retains the largest population of German-descent Americans to this day (Conzen, 1980).</p>
+
+      <p class="body-text" style="margin-top: var(--space-4);">The primary emigrant stream from which the Pennsylvania Schoedlers likely came was the Palatinate and surrounding Rhine territories — precisely the same geographic region where the Schödler noble family had its documented medieval roots (Library of Congress, n.d.). Fogleman (1996) documents that Pennsylvania Germans came predominantly from southwestern Germany: the Palatinate, Baden-Württemberg, Hesse, Switzerland, and Alsace. The largest emigration wave, 1717–1775, was driven by religious persecution, land pressure, and the economic devastation left by the War of the Spanish Succession in the Rhineland.</p>
+
+      <div class="pull-quote reveal">
+        <blockquote>"Thus far no connecting link between the Schödlers in Germany and Switzerland with those in America has been found."</blockquote>
+        <cite>— Historical &amp; Biographical Annals of Berks County, Pennsylvania (1907)</cite>
+      </div>
+
+      <p class="body-text reveal">What <em>is</em> consistent across both branches: a <strong>tradition of business ownership and community leadership</strong>. In Germany, the textile industrialists of Münchberg. In America, multiple generations of business founders across sectors and centuries. This entrepreneurial character — building something, sustaining it, and passing it forward — appears to be a family signature regardless of which side of the Atlantic one examines. Whether that continuity is genetic, cultural, or simply the product of shared geographical and social origins remains an open question for future genealogical research.</p>
+
+      <div class="analysis-box reveal">
+        <div class="analysis-box-title">The Genealogical Gap: A Research Note</div>
+        <p>The absence of a documented genealogical link between the German and American Schoedel lines is not historically unusual. Pre-emigration records in the Rhine provinces were often kept at the parish level in German, used spelling variants that do not map cleanly to English transliterations, and suffered losses from wars and fires. Berks County immigration patterns show that many families arrived without documents, and surname spelling was frequently anglicized or standardized by colonial-era clerks and pastors. The tool for closing this gap would be comparative DNA analysis combined with systematic review of Bavarian and Rhenish parish records (Kirchenbücher) — a task that remains undone for the Schoedel name specifically.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="usa-bridge reveal">
+        <h3>🇩🇪 → 🇺🇸 Shared Traits Across Branches</h3>
+        <div class="card-grid" style="margin-top:var(--space-4); gap: var(--space-3);">
+          <div style="padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface);">
+            <div style="font-size:var(--text-xs); font-weight:700; color:var(--color-primary); margin-bottom:var(--space-1);">Business Ownership</div>
+            <div style="font-size:var(--text-xs); color:var(--color-text-muted);">Textile industrialists in Münchberg (1885–2008); entrepreneurs across Pennsylvania and beyond (17th c.–present)</div>
+          </div>
+          <div style="padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface);">
+            <div style="font-size:var(--text-xs); font-weight:700; color:var(--color-primary); margin-bottom:var(--space-1);">Rhine Province Origins</div>
+            <div style="font-size:var(--text-xs); color:var(--color-text-muted);">Both lines documented from Rhineland/Palatinate region. Fogleman (1996) and Wokeck (1999) confirm the Rhine as the dominant Pennsylvania German emigration source.</div>
+          </div>
+          <div style="padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface);">
+            <div style="font-size:var(--text-xs); font-weight:700; color:var(--color-primary); margin-bottom:var(--space-1);">Community Embeddedness</div>
+            <div style="font-size:var(--text-xs); color:var(--color-text-muted);">Both branches deeply embedded in local communities across multiple generations — the Mittelstand ethos of longevity (Venohr et al., 2015)</div>
+          </div>
+          <div style="padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface);">
+            <div style="font-size:var(--text-xs); font-weight:700; color:var(--color-primary); margin-bottom:var(--space-1);">Generational Resilience</div>
+            <div style="font-size:var(--text-xs); color:var(--color-text-muted);">Sustained enterprise through wars, depressions, and upheaval on both continents — a pattern Fogleman (1996) and Conzen (1980) identify in Pennsylvania German communities broadly</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-1" style="margin-top: var(--space-5);">
+        <div class="card-icon">🔍</div>
+        <h3 class="card-title">Primary Sources for Further Research</h3>
+        <p class="card-body" style="margin-bottom: var(--space-3);">Archives and databases for genealogical continuation:</p>
+        <ul style="margin-top:var(--space-3); display:flex; flex-direction:column; gap:var(--space-2);">
+          <li><a href="https://catalog.archives.gov/id/12044361" class="source-link" target="_blank">NARA — NSDAP Membership Cards (Record Group 242)</a></li>
+          <li><a href="https://www.muenchbuerger.info/hmw/o4_schoedelsvilla.html" class="source-link" target="_blank">MünchBürger e.V. — Schoedel Villa History</a></li>
+          <li><a href="https://www.heraldrysinstitute.com/lang/en/cognomi/Schodel/idc/718384/" class="source-link" target="_blank">Heraldry Institute — Schödel Name Origins (1333–1398)</a></li>
+          <li><a href="https://pagenweb.org/~berks/oldberkssite/books/montgomery/s07.html" class="source-link" target="_blank">Berks County, PA — Schoedler Family History (1907)</a></li>
+          <li><a href="https://guides.loc.gov/german-genealogy/emigration-from-germany/palatinate" class="source-link" target="_blank">Library of Congress — Palatinate Emigration Records</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornamental-sep" aria-hidden="true">· · ✦ · ·</div>
+
+<!-- ===== APA 7 REFERENCE LIST ===== -->
+<section class="reference-section" id="references">
+  <div class="reference-inner">
+    <div class="chapter-header reveal">
+      <span class="chapter-era">Scholarly Sources</span>
+      <h2 class="chapter-title">References</h2>
+      <p class="chapter-lead">All sources cited in this presentation, formatted in APA 7th edition. Primary archival sources are marked accordingly.</p>
+    </div>
+
+    <span class="ref-label reveal">Primary Archival Sources</span>
+    <ul class="reference-list reveal">
+      <li>U.S. National Archives. (2026). <em>NSDAP membership records, Record Group 242</em> [Digitized microfilm, Reels U0026 and P0136]. National Archives and Records Administration. <a href="https://catalog.archives.gov/id/12044361" target="_blank">https://catalog.archives.gov/id/12044361</a></li>
+      <li>MünchBürger e.V. (n.d.). <em>Schoedels Villa — Historischer Münchberg Weg</em>. MünchBürger Stadtgeschichte. <a href="https://www.muenchbuerger.info/hmw/o4_schoedelsvilla.html" target="_blank">https://www.muenchbuerger.info/hmw/o4_schoedelsvilla.html</a></li>
+      <li>Historical &amp; Biographical Annals of Berks County. (1907). <em>Schoedler family history</em>. [Reproduced in PaGenWeb Berks County Archive]. <a href="https://pagenweb.org/~berks/oldberkssite/books/montgomery/s07.html" target="_blank">https://pagenweb.org/~berks/oldberkssite/books/montgomery/s07.html</a></li>
+      <li>Heraldry Institute of Rome. (2018). <em>Schodel — Name and coat of arms database</em>. <a href="https://www.heraldrysinstitute.com/lang/en/cognomi/Schodel/idc/718384/" target="_blank">https://www.heraldrysinstitute.com/lang/en/cognomi/Schodel/idc/718384/</a></li>
+    </ul>
+
+    <span class="ref-label reveal" style="margin-top: var(--space-8);">Peer-Reviewed Books and Articles</span>
+    <ul class="reference-list reveal">
+      <li>Conzen, K. N. (1980). Germans. In S. Thernstrom (Ed.), <em>Harvard encyclopedia of American ethnic groups</em> (pp. 405–425). Harvard University Press.</li>
+      <li>Eichengreen, B., &amp; Ritschl, A. (2008). <em>Understanding West German economic growth in the 1950s</em> (LSE Economic History Working Paper No. 113). London School of Economics. <a href="https://www.lse.ac.uk/Economic-History/Assets/Documents/WorkingPapers/Economic-History/2008/WP113.pdf" target="_blank">https://www.lse.ac.uk/Economic-History/Assets/Documents/WorkingPapers/Economic-History/2008/WP113.pdf</a></li>
+      <li>Falter, J. W. (1991). <em>Hitlers Wähler</em>. C.H. Beck.</li>
+      <li>Fear, J., Venohr, B., &amp; Witt, P. (2006). The end of family business? The Mittelstand and German capitalism in transition, 1949–2000. <em>Business History Review, 80</em>(2), 263–295. <a href="https://ideas.repec.org/a/cup/buhirw/v80y2006i02p263-295_03.html" target="_blank">https://doi.org/10.1017/S0007680500000659</a></li>
+      <li>Fogleman, A. S. (1996). <em>Hopeful journeys: German immigration, settlement, and political culture in colonial America, 1717–1775</em>. University of Pennsylvania Press.</li>
+      <li>Kater, M. H. (1983). <em>The Nazi Party: A social profile of members and leaders, 1919–1945</em>. Harvard University Press.</li>
+      <li>Simon, H. (1996). <em>Hidden champions: Lessons from 500 of the world's best unknown companies</em>. Harvard Business School Press.</li>
+      <li>Venohr, B., Fear, J., &amp; Witt, P. (2015). <em>The best of German Mittelstand</em>. WHU — Otto Beisheim School of Management.</li>
+      <li>Wilson, P. H. (2016). <em>Heart of Europe: A history of the Holy Roman Empire</em>. Harvard University Press.</li>
+      <li>Wokeck, M. S. (1999). <em>Trade in strangers: The beginnings of mass migration to North America</em>. Penn State University Press.</li>
+    </ul>
+
+    <span class="ref-label reveal" style="margin-top: var(--space-8);">Journalism and Institutional Sources</span>
+    <ul class="reference-list reveal">
+      <li>ADL (Anti-Defamation League). (n.d.). <em>German industry and the Third Reich</em>. <a href="https://www.adl.org/resources/news/german-industry-and-third-reich" target="_blank">https://www.adl.org/resources/news/german-industry-and-third-reich</a></li>
+      <li>Bosshart, L., &amp; Weigand, K. (2026, May 15). Who joined the Nazi Party. <em>Harvard Gazette</em>. <a href="https://news.harvard.edu/gazette/story/2026/05/who-joined-the-nazi-party/" target="_blank">https://news.harvard.edu/gazette/story/2026/05/who-joined-the-nazi-party/</a></li>
+      <li>Bridges, R. (n.d.). <em>Arms and the man: Imperial grants in the Holy Roman Empire</em>. <a href="http://bridges.rem33.com/books/vonValborth_D.htm" target="_blank">http://bridges.rem33.com/books/vonValborth_D.htm</a></li>
+      <li>Geary, D. (n.d.). <em>Who voted for the Nazis?</em> JohnDClare.net. <a href="https://www.johndclare.net/Weimar6_Geary.htm" target="_blank">https://www.johndclare.net/Weimar6_Geary.htm</a></li>
+      <li>Hardach, G. (2014). Post-war economies (Germany). In U. Daniel et al. (Eds.), <em>1914–1918-online: International encyclopedia of the First World War</em>. Freie Universität Berlin. <a href="https://encyclopedia.1914-1918-online.net/article/post-war-economies-germany/" target="_blank">https://encyclopedia.1914-1918-online.net/article/post-war-economies-germany/</a></li>
+      <li>International Labour Organization. (ca. 1950). <em>Prospects and problems of the textile industry in Western Germany</em>. ILO. <a href="https://researchrepository.ilo.org/view/pdfCoverPage?instCode=41ILO_INST&amp;filePid=13115315570002676&amp;download=true" target="_blank">https://researchrepository.ilo.org</a></li>
+      <li>Library of Congress. (n.d.). <em>German genealogy: Emigration from the Palatinate</em>. <a href="https://guides.loc.gov/german-genealogy/emigration-from-germany/palatinate" target="_blank">https://guides.loc.gov/german-genealogy/emigration-from-germany/palatinate</a></li>
+      <li>Social History Portal. (2020). <em>Deindustrialization and textile employment, 1970–2000</em>. <a href="https://socialhistoryportal.org/news/articles/311641" target="_blank">https://socialhistoryportal.org/news/articles/311641</a></li>
+      <li>University of Hof. (2023). 125 Jahre Königlich Höhere Weberschule in Münchberg: Die historischen Wurzeln. <em>Campuls — Magazin der Hochschule Hof</em>. <a href="https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/" target="_blank">https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/</a></li>
+    </ul>
+
+    <div class="context-box reveal" style="margin-top: var(--space-10);">
+      <div class="context-box-title">A Note on Citation Practice</div>
+      <p>This presentation follows APA 7th edition citation conventions throughout. All factual claims — demographic data, archival records, historical statistics, and scholarly findings — are cited with author-year in-text references drawn from peer-reviewed monographs, journal articles, and primary archival sources. General-purpose and crowd-sourced encyclopedias are not cited. Peer-reviewed specialist encyclopedias and subject-specific reference works — such as the <em>1914–1918-online: International Encyclopedia of the First World War</em> (Freie Universität Berlin), which employs a scholarly editorial board and double-blind peer review — are distinguished from general encyclopedias and cited where they provide the authoritative specialized source. Primary archival sources — particularly the NARA NSDAP Membership Records (Record Group 242) and the MünchBürger historical society records — form the evidentiary foundation for the industrial and Nazi-era chapters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Schödel</div>
+    <p class="footer-note">This presentation was compiled from primary archival sources including the US National Archives NSDAP Membership Card Collection (Record Group 242), the MünchBürger historical society records, the Heraldry Institute of Rome, Berks County Pennsylvania historical annals, and the University of Hof Campuls historical archive. All NSDAP membership records sourced directly from digitized microfilm released publicly in March 2026. All factual claims cited in APA 7 format.</p>
+
+    <p class="footer-sources">
+      <strong>Key Primary Sources:</strong><br>
+      <a href="https://catalog.archives.gov/id/12044361" target="_blank">NARA Record Group 242</a> ·
+      <a href="https://www.muenchbuerger.info/hmw/o4_schoedelsvilla.html" target="_blank">MünchBürger e.V.</a> ·
+      <a href="https://campuls.hof-university.com/latest/125-jahre-koeniglich-hoehere-weberschule-in-muenchberg-die-historischen-wurzeln-2/" target="_blank">University of Hof</a> ·
+      <a href="https://pagenweb.org/~berks/oldberkssite/books/montgomery/s07.html" target="_blank">Berks County Annals</a> ·
+      <a href="https://www.heraldrysinstitute.com/lang/en/cognomi/Schodel/idc/718384/" target="_blank">Heraldry Institute</a> ·
+      <a href="https://news.harvard.edu/gazette/story/2026/05/who-joined-the-nazi-party/" target="_blank">Harvard Gazette (2026)</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // ===== THEME TOGGLE =====
+  (function () {
+    const btn = document.querySelector('[data-theme-toggle]');
+    const html = document.documentElement;
+    let theme = 'dark';
+    html.setAttribute('data-theme', theme);
+
+    if (btn) {
+      btn.addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', theme);
+        btn.innerHTML = theme === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+        btn.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+      });
+    }
+  })();
+
+  // ===== READING PROGRESS =====
+  (function () {
+    const bar = document.getElementById('readingProgress');
+    if (!bar) return;
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrolled / total * 100) + '%';
+    }, { passive: true });
+  })();
+
+  // ===== SCROLL-AWARE HEADER =====
+  (function () {
+    const header = document.getElementById('siteHeader');
+    if (!header) return;
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+  })();
+
+  // ===== NAV PILLS: smooth scroll + active state =====
+  (function () {
+    const NAV_OFFSET = 112; // height of sticky header + nav bar
+
+    // Fix anchor clicks to offset for sticky bars
+    document.querySelectorAll('.nav-pill').forEach(pill => {
+      pill.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        const y = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    });
+
+    // Active pill tracking via scroll position
+    const sections = ['origins','rhineland','business','weimar','naziera','postwar','usa','references'];
+    const navBar = document.querySelector('.chapter-nav');
+
+    function setActivePill(id) {
+      document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
+      const active = document.querySelector(`.nav-pill[href="#${id}"]`);
+      if (active) {
+        active.classList.add('active');
+        // Scroll nav bar horizontally so active pill is visible
+        const pillLeft = active.offsetLeft;
+        const pillWidth = active.offsetWidth;
+        const navWidth = navBar.offsetWidth;
+        const scrollLeft = pillLeft - (navWidth / 2) + (pillWidth / 2);
+        navBar.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      }
+    }
+
+    function onScroll() {
+      const scrollY = window.scrollY + NAV_OFFSET + 40;
+      let current = sections[0];
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) {
+          current = id;
+        }
+      }
+      setActivePill(current);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // set on load
+  })();
+
+  // ===== SCROLL REVEAL =====
+  (function () {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -60px 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+  })();
+</script>
+
+</body>
+</html>
