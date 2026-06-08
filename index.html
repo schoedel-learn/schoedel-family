@@ -1155,50 +1155,25 @@
 
     /* ===== SEARCH ===== */
     .search-trigger {
-      position: fixed;
-      top: 50%;
-      right: var(--space-4);
-      transform: translateY(-50%);
-      z-index: 200;
-      background: var(--color-surface-raised);
-      border: 1px solid color-mix(in oklch, var(--color-primary) 30%, transparent);
+      background: transparent;
+      border: 1px solid color-mix(in oklch, var(--color-primary) 35%, transparent);
       border-radius: 999px;
-      width: 44px;
-      height: 44px;
+      width: 34px;
+      height: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       color: var(--color-primary);
-      font-size: 1.1rem;
-      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+      font-size: 0.95rem;
+      transition: background 0.2s, border-color 0.2s;
+      flex-shrink: 0;
     }
     .search-trigger:hover {
-      background: color-mix(in oklch, var(--color-primary) 15%, var(--color-surface-raised));
-      box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+      background: color-mix(in oklch, var(--color-primary) 12%, var(--color-surface-raised));
     }
     .search-trigger-hint {
-      position: fixed;
-      top: 50%;
-      right: calc(var(--space-4) + 52px);
-      transform: translateY(-50%);
-      z-index: 200;
-      background: var(--color-surface-raised);
-      border: 1px solid color-mix(in oklch, var(--color-border) 60%, transparent);
-      border-radius: var(--radius-sm);
-      padding: 3px 8px;
-      font-size: 0.7rem;
-      color: var(--color-text-faint);
-      letter-spacing: 0.06em;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s;
-      white-space: nowrap;
-    }
-    .search-trigger:hover + .search-trigger-hint,
-    .search-trigger-hint:hover {
-      opacity: 1;
+      display: none;
     }
 
     /* Overlay */
@@ -1419,10 +1394,6 @@
   <a href="#usa" class="nav-pill">American Branch</a>
   <a href="#today" class="nav-pill">The Name Today</a>
   <a href="#references" class="nav-pill">References</a>
-
-<!-- ===== SEARCH TRIGGER ===== -->
-<button class="search-trigger" id="searchTrigger" aria-label="Search presentation (press /)" title="Search">&#128269;</button>
-<span class="search-trigger-hint">Press <kbd>/</kbd> to search</span>
 
 <!-- ===== SEARCH OVERLAY ===== -->
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search">
@@ -4024,52 +3995,7 @@
     }
 
     /* ===== SEARCH ===== */
-    .search-trigger {
-      position: fixed;
-      top: 50%;
-      right: var(--space-4);
-      transform: translateY(-50%);
-      z-index: 200;
-      background: var(--color-surface-raised);
-      border: 1px solid color-mix(in oklch, var(--color-primary) 30%, transparent);
-      border-radius: 999px;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--color-primary);
-      font-size: 1.1rem;
-      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
-    }
-    .search-trigger:hover {
-      background: color-mix(in oklch, var(--color-primary) 15%, var(--color-surface-raised));
-      box-shadow: 0 4px 20px rgba(0,0,0,0.45);
-    }
-    .search-trigger-hint {
-      position: fixed;
-      top: 50%;
-      right: calc(var(--space-4) + 52px);
-      transform: translateY(-50%);
-      z-index: 200;
-      background: var(--color-surface-raised);
-      border: 1px solid color-mix(in oklch, var(--color-border) 60%, transparent);
-      border-radius: var(--radius-sm);
-      padding: 3px 8px;
-      font-size: 0.7rem;
-      color: var(--color-text-faint);
-      letter-spacing: 0.06em;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s;
-      white-space: nowrap;
-    }
-    .search-trigger:hover + .search-trigger-hint,
-    .search-trigger-hint:hover {
-      opacity: 1;
-    }
+
 
     /* Overlay */
     .search-overlay {
